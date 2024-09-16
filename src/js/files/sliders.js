@@ -8,7 +8,7 @@
 //При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 //Пример: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, Grid } from 'swiper/modules';
+import { Navigation, Grid, Pagination } from 'swiper/modules';
 /*
 Основные модули слайдера:
 Navigation, Pagination, Autoplay,
@@ -52,11 +52,11 @@ function initSliders() {
 
 			const slider = programTemplate.querySelector('.program-template__slider');
 			const programSlider = new Swiper(slider, {
-				modules: [Navigation, Grid],
+				modules: [Navigation, Grid, Pagination],
 				observer: true,
 				observeParents: true,
-				slidesPerView: 2,
-				spaceBetween: 20,
+				slidesPerView: 1.12,
+				spaceBetween: 16,
 				autoHeight: false,
 				speed: 800,
 
@@ -76,12 +76,11 @@ function initSliders() {
 				*/
 
 				// Пагинация
-				/*
 				pagination: {
 					el: '.swiper-pagination',
 					clickable: true,
 				},
-				*/
+
 
 				// Скроллбар
 				/*
@@ -99,6 +98,10 @@ function initSliders() {
 
 				// Брейкпоинты
 				breakpoints: {
+					480: {
+						slidesPerView: 2,
+						spaceBetween: 16,
+					},
 					768: {
 						slidesPerView: 3,
 						spaceBetween: 20,

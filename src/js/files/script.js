@@ -1,5 +1,5 @@
 // Подключение функционала "Чертоги Фрилансера"
-import { isMobile, bodyLockToggle, removeClasses, _slideToggle } from "./functions.js";
+import { isMobile, bodyLockToggle, removeClasses, _slideToggle, _slideUp } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
@@ -38,26 +38,53 @@ document.addEventListener('click', function (e) {
     }
   }
 
-  // if (window.innerWidth < 767.98) {
-  //   if (targetElement.closest('.menu__arrow_main')) {
-  //     const arrowParent = targetElement.closest('.menu__item_has-children');
-  //     const list = arrowParent.querySelector('ul');
-  //     _slideToggle(list);
-  //     arrowParent.classList.toggle('_hover');
-  //   }
-  // }
+  if (targetElement.closest('.menu-var1__item>a')) {
+    e.preventDefault();
+    const parent = targetElement.closest('.menu-var1__item');
+
+    if (window.innerWidth > 767.98) {
+      removeClasses(document.querySelectorAll('.menu-var1__item._active'), "_active");
+      parent.classList.add('_active');
+    } else {
+      parent.classList.toggle('_active');
+      const parentBody = parent.querySelector('.menu-var1__body');
+      _slideToggle(parentBody);
+    }
+  }
+
+  if (targetElement.closest('.menu__back') && window.innerWidth < 767.98) {
+    targetElement.closest('.menu__item').classList.remove('_active');
+  }
+
+  if (targetElement.closest('.menu__arrow_main') && window.innerWidth < 767.98) {
+    targetElement.closest('.menu__item').classList.add('_active');
+  }
+  if (targetElement.closest('.menu__arrow_sub') && window.innerWidth < 767.98) {
+    const parent = targetElement.closest('.menu__subitem_has-children');
+    parent.classList.toggle('_active');
+    const sublist = parent.querySelector('.menu__sublist');
+    _slideToggle(sublist);
+
+  }
 })
 
+const menuSublist = document.querySelectorAll('.menu__subitem_has-children .menu__sublist');
+if (menuSublist.length > 0 && window.innerWidth < 767.98) {
+  menuSublist.forEach(sublist => {
+    _slideUp(sublist);
+  });
+}
 const headerCatalogMenu = document.querySelector('.menu-var1__items');
 if (headerCatalogMenu) {
   const elements = Array.from(headerCatalogMenu.children);
 
   elements.forEach(element => {
-    element.addEventListener('click', (e) => {
-      e.preventDefault();
-      element.classList.add('_active');
-      elements.filter(item => item !== element).forEach(item => item.classList.remove('_active'));
-    });
+    const elementBody = element.querySelector('.menu-var1__body');
+
+    if (window.innerWidth < 767.98) {
+      element.classList.remove('_active');
+      _slideUp(elementBody);
+    }
   });
 }
 
