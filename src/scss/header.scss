@@ -192,7 +192,8 @@
 .header-bottom {
 	position: sticky;
 	top: 0;
-
+	background-color: var(--page-bg-color);
+	
 	// .header-bottom__container
 	&__container {
 	}

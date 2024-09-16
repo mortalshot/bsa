@@ -178,6 +178,26 @@ section {
   }
 }
 
+.text-link {
+  display: inline-flex;
+  gap: toRem(12);
+  align-items: center;
+
+  @media (any-hover: hover) {
+    &:hover {
+      svg {
+        animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+      }
+    }
+  }
+
+  svg {
+    width: toRem(11);
+    height: toRem(8);
+    flex: 0 0 toRem(11);
+  }
+}
+
 // Анимации при наведении
 [class*="link-"] {
   position: relative;
