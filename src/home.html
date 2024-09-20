@@ -1,16 +1,504 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"Home page"
-	})
-	<body style="--page-bg-color: #1265B5;">
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-				<!-- <div style="height: 200vh;"></div> -->
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_js.htm',{})
-	</body>
+@@include('html/_head.htm',{
+"title":"Home page"
+})
+
+<body style="--page-bg-color: #1265B5;">
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="firstscreen">
+				<div class="firstscreen__slider swiper">
+					<div class="firstscreen__wrapper swiper-wrapper">
+						<div class="firstscreen__slide swiper-slide firstscreen-slide">
+							<div class="firstscreen-slide__content">
+								<div class="firstscreen-slide__container">
+									<div class="firstscreen-slide__body">
+										<div class="firstscreen-slide__title _content">
+											<h1><strong>See you in the new academic</strong> year on Wednesday</h1>
+										</div>
+										<div class="firstscreen-slide__date">30 August</div>
+										<div class="firstscreen-slide__text _content">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										</div>
+										<div class="firstscreen-slide__button">
+											<a href="" class="btn btn_border-white">
+												<span>Read more</span>
+												<svg class="icon">
+													<use xlink:href="@img/icons/icons.svg#text-link"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="firstscreen-slide__image">
+								<picture>
+									<source srcset="@img/firstscreen/firstscreen1-image-big.png" media="(min-width: 1639.98px)">
+									<img src="@img/firstscreen/firstscreen1-image.png" alt="" loading="lazy">
+								</picture>
+							</div>
+						</div>
+
+						<div class="firstscreen__slide swiper-slide firstscreen-slide">
+							<div class="firstscreen-slide__bg">
+								<video playsinline webkit-playsinline autoplay muted loop>
+									<source src="@img/video/home-template1-video.mp4" type="video/mp4">
+								</video>
+							</div>
+
+							<div class="firstscreen-slide__content">
+								<div class="firstscreen-slide__container">
+									<div class="firstscreen-slide__body">
+										<div class="firstscreen-slide__title _content">
+											<h1><strong>See you in the new academic</strong> year on Wednesday</h1>
+										</div>
+										<div class="firstscreen-slide__date">30 August</div>
+										<div class="firstscreen-slide__button">
+											<a href="" class="btn btn_border-white">
+												<span>Read more</span>
+												<svg class="icon">
+													<use xlink:href="@img/icons/icons.svg#text-link"></use>
+												</svg>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper__arrows">
+						<button type="button" class="swiper__arrow swiper__arrow_prev">
+							<svg class="icon">
+								<use xlink:href="@img/icons/icons.svg#arrow-slider"></use>
+							</svg>
+						</button>
+
+						<button type="button" class="swiper__arrow swiper__arrow_next">
+							<svg class="icon">
+								<use xlink:href="@img/icons/icons.svg#arrow-slider"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="swiper-pagination"></div>
+				</div>
+			</section>
+
+			<section class="widget-events">
+				<div class="widget-events__left">
+					<div class="widget-events__cards">
+						<article class="widget-events__card events-card">
+							<div class="events-card__bg _bg">
+								<img src="@img/events/events-card1-bg.jpg" alt="" loading="lazy">
+							</div>
+							<div class="events-card__wrapper">
+								<div class="events-card__heading">
+									<div class="events-card__tags">
+										<div class="events-card__tag">Latest NEWS</div>
+										<div class="events-card__date">22 Aug 24</div>
+									</div>
+								</div>
+								<div class="events-card__body">
+									<div class="events-card__content">
+										<div class="events-card__title">Become a Student Buddy for our incoming international students</div>
+
+										<div class="events-card__hide">
+											<div class="events-card__excerpt">Would you like to help our incoming international students to settle into Latvia, Riga, and the Academy’s study environment?</div>
+											<div class="events-card__more">
+												<div class="text-link">
+													<span>Read more</span>
+													<svg class="icon">
+														<use xlink:href="@img/icons/icons.svg#text-link"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="" class="events-card__link"></a>
+							</div>
+						</article>
+						<article class="widget-events__card events-card">
+							<div class="events-card__bg _bg">
+								<img src="@img/events/events-card2-bg.jpg" alt="" loading="lazy">
+							</div>
+							<div class="events-card__wrapper">
+								<a href="" class="events-card__link"></a>
+
+								<div class="events-card__heading">
+									<div class="events-card__tags">
+										<div class="events-card__tag">NEWS</div>
+										<div class="events-card__date">22 Aug 24</div>
+									</div>
+								</div>
+								<div class="events-card__body">
+									<div class="events-card__content">
+										<div class="events-card__title">4th International Scientific and Practical Conference Multidimensional Translation: From Science to Art</div>
+
+										<div class="events-card__hide">
+											<div class="events-card__excerpt">Would you like to help our incoming international students to settle into Latvia, Riga, and the Academy’s study environment?</div>
+											<div class="events-card__more">
+												<div class="text-link">
+													<span>Read more</span>
+													<svg class="icon">
+														<use xlink:href="@img/icons/icons.svg#text-link"></use>
+													</svg>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="widget-events__list">
+						<div class="widget-events__item events-item">
+							<div class="events-item__row">
+								<div class="events-item__title">
+									<span>Become a Student Buddy for our incoming international students!</span>
+								</div>
+								<div class="events-item__date">22 Aug 24</div>
+								<a href="" class="events-item__link">
+									<svg class="icon">
+										<use xlink:href="@img/icons/icons.svg#chevron-link2"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+
+						<div class="widget-events__item events-item">
+							<div class="events-item__row">
+								<div class="events-item__title">
+									<span>4th International Scientific and Practical Conference Multidimensional Translation: From Science to Art</span>
+								</div>
+								<div class="events-item__date">22 Aug 24</div>
+								<a href="" class="events-item__link">
+									<svg class="icon">
+										<use xlink:href="@img/icons/icons.svg#chevron-link2"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+
+						<div class="widget-events__item events-item">
+							<div class="events-item__row">
+								<div class="events-item__title">
+									<span>Become a Student Buddy for our incoming international students!</span>
+								</div>
+								<div class="events-item__date">22 Aug 24</div>
+								<a href="" class="events-item__link">
+									<svg class="icon">
+										<use xlink:href="@img/icons/icons.svg#chevron-link2"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+
+						<div class="widget-events__item events-item">
+							<div class="events-item__row">
+								<div class="events-item__title">
+									<span>4th International Scientific and Practical Conference Multidimensional Translation: From Science to Art</span>
+								</div>
+								<div class="events-item__date">22 Aug 24</div>
+								<a href="" class="events-item__link">
+									<svg class="icon">
+										<use xlink:href="@img/icons/icons.svg#chevron-link2"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+
+						<div class="widget-events__link">
+							<a href="" class="text-link">
+								<span>View more</span>
+								<svg class="icon">
+									<use xlink:href="@img/icons/icons.svg#text-link"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="widget-events__right">
+					<div class="widget-events__upcoming events-upcoming">
+						<h3 class="events-upcoming__title"><strong>UPCOMING</strong> EVENTS</h3>
+
+						<div class="events-upcoming__slider swiper">
+							<div class="events-upcoming__wrapper swiper-wrapper">
+								<div class="events-upcoming__slide swiper-slide">
+									<div class="events-upcoming__item">
+										<div class="events-upcoming__date">
+											<div class="events-upcoming__day">1</div>
+											<div class="events-upcoming__month">sep</div>
+										</div>
+										<div class="events-upcoming__link">
+											<a href="">Become a Student Buddy for our incoming international students!</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="events-upcoming__slide swiper-slide">
+									<div class="events-upcoming__item">
+										<div class="events-upcoming__date">
+											<div class="events-upcoming__day">22</div>
+											<div class="events-upcoming__month">sep</div>
+										</div>
+										<div class="events-upcoming__link">
+											<a href="">Congratulation on successful accreditation</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="events-upcoming__slide swiper-slide">
+									<div class="events-upcoming__item">
+										<div class="events-upcoming__date">
+											<div class="events-upcoming__day">12</div>
+											<div class="events-upcoming__month">sep</div>
+										</div>
+										<div class="events-upcoming__link">
+											<a href="">International Student Identity Card ISIC</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="events-upcoming__slide swiper-slide">
+									<div class="events-upcoming__item">
+										<div class="events-upcoming__date">
+											<div class="events-upcoming__day">14</div>
+											<div class="events-upcoming__month">sep</div>
+										</div>
+										<div class="events-upcoming__link">
+											<a href="">Resit Week 2024/2025</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="events-upcoming__slide swiper-slide">
+									<div class="events-upcoming__item">
+										<div class="events-upcoming__date">
+											<div class="events-upcoming__day">21</div>
+											<div class="events-upcoming__month">aug</div>
+										</div>
+										<div class="events-upcoming__link">
+											<a href="">CCBE Amicus Curiae Contest 2025, organized by the Council of Bars and Law Societies of Europe (CCBE)</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="swiper-pagination"></div>
+						</div>
+
+						<div class="widget-events__link">
+							<a href="" class="text-link">
+								<span>View more</span>
+								<svg class="icon">
+									<use xlink:href="@img/icons/icons.svg#text-link"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="features section-bg" style="--section-bg: #fff; --section-color: #1B232B;">
+				<div class="features__bg">
+					<picture>
+						<source srcset="@img/features/features-bg-big.png" media="(min-width: 1639.98px)">
+						<img src="@img/features/features-bg.png" alt="" loading="lazy">
+					</picture>
+				</div>
+
+				<div class="features__container">
+					<div class="features__heading _content">
+						<h2>WHY CHOOSE <strong>BIA?</strong></h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a augue bibendum, tincidunt lectus nec, feugiat velit. Mauris laoreet mi sit amet risus semper, eget sagittis enim malesuada. Pellentesque eu nisi ac orci pretium gravida. Proin faucibus efficitur mi. Integer volutpat interdum lacus. Pellentesque in cursus felis, eget dictum erat.</p>
+					</div>
+
+					<div class="features__slider swiper">
+						<div class="features__wrapper swiper-wrapper">
+							<div class="features__slide swiper-slide features-item">
+								<div class="features-item__front">
+									<div class="features-item__icon">
+										<img src="@img/features/features1-icon.svg" alt="" loading="lazy">
+									</div>
+
+									<div class="features-item__caption">LONG-TERM <br> TRADITIONS</div>
+								</div>
+
+								<div class="features-item__back">
+									<div class="features-item__title">LONG-TERM TRADITIONS</div>
+									<div class="features-item__text _content">
+										<p>Lorem ipsum dolor sit amet. </p>
+									</div>
+								</div>
+							</div>
+
+							<div class="features__slide swiper-slide features-item">
+								<div class="features-item__front">
+									<div class="features-item__icon">
+										<img src="@img/features/features2-icon.svg" alt="" loading="lazy">
+									</div>
+
+									<div class="features-item__caption">EUROPEAN <br> UNIVERSITY</div>
+								</div>
+
+								<div class="features-item__back">
+									<div class="features-item__title">WIDE SELECTION OF A STUDY PROGEAMMES</div>
+									<div class="features-item__text _content">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. </p>
+									</div>
+								</div>
+							</div>
+
+							<div class="features__slide swiper-slide features-item">
+								<div class="features-item__front">
+									<div class="features-item__icon">
+										<img src="@img/features/features3-icon.svg" alt="" loading="lazy">
+									</div>
+
+									<div class="features-item__caption">WIDE SELECTION OF A STUDY PROGEAMMES</div>
+								</div>
+
+								<div class="features-item__back">
+									<div class="features-item__title">WIDE SELECTION OF A STUDY PROGEAMMES</div>
+									<div class="features-item__text _content">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. </p>
+									</div>
+								</div>
+							</div>
+
+							<div class="features__slide swiper-slide features-item">
+								<div class="features-item__front">
+									<div class="features-item__icon">
+										<img src="@img/features/features4-icon.svg" alt="" loading="lazy">
+									</div>
+
+									<div class="features-item__caption">REASONABLE <br> COST OF LIVING</div>
+								</div>
+
+								<div class="features-item__back">
+									<div class="features-item__title">WIDE SELECTION OF A STUDY PROGEAMMES</div>
+									<div class="features-item__text _content">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. </p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-pagination"></div>
+					</div>
+
+					<div class="features__button">
+						<button type="button" class="btn btn_bg-green">
+							<span>Apply online</span>
+							<svg class="icon icon_link">
+								<use xlink:href="@img/icons/icons.svg#text-link"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="career section-bg" style="--section-bg: #15528E; --section-color: #fff;">
+				<div class="career__container">
+					<div class="career__heading _content">
+						<h2><strong>BUILD YOUR CAREER</strong> AS OUR ALUMNI</h2>
+						<p>In our teaching, we focus on results and your future success. We hope you do too. Here is a list of just a few companies where our alumni work.</p>
+					</div>
+
+					<div class="career__slider-wrapper">
+						<button type="button" class="swiper__arrow swiper__arrow_prev">
+							<svg class="icon">
+								<use xlink:href="@img/icons/icons.svg#arrow-slider"></use>
+							</svg>
+						</button>
+
+						<div class="career__slider swiper">
+							<div class="career__wrapper swiper-wrapper">
+								<div class="career__slide swiper-slide career-item">
+									<a href="" class="career-item__wrapper">
+										<div class="career-item__image">
+											<img src="@img/career/career-logo1.jpg" alt="" loading="lazy">
+										</div>
+									</a>
+								</div>
+
+								<div class="career__slide swiper-slide career-item">
+									<div class="career-item__wrapper">
+										<a href="" class="career-item__image">
+											<img src="@img/career/career-logo2.jpg" alt="" loading="lazy">
+										</a>
+									</div>
+								</div>
+
+								<div class="career__slide swiper-slide career-item">
+									<a href="" class="career-item__wrapper">
+										<div class="career-item__image">
+											<img src="@img/career/career-logo1.jpg" alt="" loading="lazy">
+										</div>
+									</a>
+								</div>
+
+								<div class="career__slide swiper-slide career-item">
+									<div class="career-item__wrapper">
+										<a href="" class="career-item__image">
+											<img src="@img/career/career-logo2.jpg" alt="" loading="lazy">
+										</a>
+									</div>
+								</div>
+
+								<div class="career__slide swiper-slide career-item">
+									<a href="" class="career-item__wrapper">
+										<div class="career-item__image">
+											<img src="@img/career/career-logo1.jpg" alt="" loading="lazy">
+										</div>
+									</a>
+								</div>
+
+								<div class="career__slide swiper-slide career-item">
+									<div class="career-item__wrapper">
+										<a href="" class="career-item__image">
+											<img src="@img/career/career-logo2.jpg" alt="" loading="lazy">
+										</a>
+									</div>
+								</div>
+
+								<div class="career__slide swiper-slide career-item">
+									<a href="" class="career-item__wrapper">
+										<div class="career-item__image">
+											<img src="@img/career/career-logo1.jpg" alt="" loading="lazy">
+										</div>
+									</a>
+								</div>
+
+								<div class="career__slide swiper-slide career-item">
+									<div class="career-item__wrapper">
+										<a href="" class="career-item__image">
+											<img src="@img/career/career-logo2.jpg" alt="" loading="lazy">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+
+						<button type="button" class="swiper__arrow swiper__arrow_next">
+							<svg class="icon">
+								<use xlink:href="@img/icons/icons.svg#arrow-slider"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
 </html>

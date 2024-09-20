@@ -122,9 +122,263 @@ function initSliders() {
 		});
 	}
 
-	if (document.querySelector('.program-template__slider')) { //Указываем класс нужного слайдера
+	if (document.querySelector('.firstscreen__slider')) {
+		const slider = new Swiper(".firstscreen__slider", {
+			modules: [Navigation, Pagination],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 40,
+			autoHeight: false,
+			speed: 800,
+			loop: true,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Пагинация
+			pagination: {
+				el: '.firstscreen__slider .swiper-pagination',
+				clickable: true,
+			},
 
 
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.firstscreen__slider .swiper__arrow_prev',
+				nextEl: '.firstscreen__slider .swiper__arrow_next',
+			},
+
+			// Брейкпоинты
+			/* breakpoints: {
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+					grid: {
+						rows: 2,
+					},
+				},
+			}, */
+
+			on: {
+			}
+		});
+	}
+
+	if (document.querySelector('.events-upcoming__slider') && window.innerWidth <= 991.98) {
+		new Swiper(".events-upcoming__slider", {
+			modules: [Pagination],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1.4,
+			spaceBetween: 24,
+			autoHeight: true,
+			speed: 800,
+			loop: true,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Пагинация
+			pagination: {
+				el: '.events-upcoming__slider .swiper-pagination',
+				clickable: true,
+			},
+
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Брейкпоинты
+			breakpoints: {
+				480: {
+					slidesPerView: 2,
+					spaceBetween: 24,
+				},
+				575: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 40,
+				},
+			},
+
+			on: {
+			}
+		});
+	}
+
+	if (document.querySelector('.features__slider')) {
+		new Swiper(".features__slider", {
+			modules: [Pagination],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1.25,
+			spaceBetween: 20,
+			autoHeight: true,
+			speed: 800,
+			loop: true,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Пагинация
+			pagination: {
+				el: '.features__slider .swiper-pagination',
+				clickable: true,
+			},
+
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Брейкпоинты
+			breakpoints: {
+				480: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				575: {
+					slidesPerView: 2.5,
+					spaceBetween: 20,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+			},
+
+			on: {
+			}
+		});
+	}
+
+	if (document.querySelector('.career__slider')) {
+		new Swiper(".career__slider", {
+			modules: [Pagination, Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1.25,
+			spaceBetween: 20,
+			autoHeight: false,
+			speed: 800,
+			loop: true,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.career .swiper__arrow_prev',
+				nextEl: '.career .swiper__arrow_next',
+			},
+
+			// Пагинация
+			pagination: {
+				el: '.career__slider .swiper-pagination',
+				clickable: true,
+			},
+
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Брейкпоинты
+			breakpoints: {
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 24,
+				},
+				575: {
+					slidesPerView: 2,
+					spaceBetween: 24,
+				},
+				992: {
+					slidesPerView: 5,
+					spaceBetween: 24,
+				},
+			},
+
+			on: {
+			}
+		});
 	}
 }
 //Скролл на базе слайдера (по классу swiper scroll для оболочки слайдера)

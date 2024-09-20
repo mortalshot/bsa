@@ -1,5 +1,5 @@
 // Подключение функционала "Чертоги Фрилансера"
-import { isMobile, bodyLockToggle, removeClasses, _slideToggle, _slideUp } from "./functions.js";
+import { isMobile, bodyLockToggle, bodyLock, bodyUnlock, removeClasses, _slideToggle, _slideUp, _slideDown } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
@@ -10,6 +10,16 @@ document.addEventListener('click', function (e) {
   if (targetElement.closest('.menu__button')) {
     targetElement.closest('.menu__item').classList.toggle('_active');
     bodyLockToggle();
+  }
+
+  if (targetElement.closest('.search__btn')) {
+    e.preventDefault();
+    targetElement.closest('.header__search').classList.toggle('_active');
+    bodyLock();
+  }
+  if (document.querySelector('.header__search').classList.contains('_active') && !targetElement.closest('.header__search')) {
+    document.querySelector('.header__search').classList.remove('_active');
+    bodyUnlock();
   }
 
   // Показываем выпадающее меню при клике на стрелку
@@ -97,9 +107,46 @@ function updateDistanceСatalogToTop() {
   }
 }
 
+// Анимация появления контента при наведении на .events-card
+function updateEvents(cards) {
+  let cardLockStatus = true;
+  cards.forEach(element => {
+    var hide = element.querySelector('.events-card__hide');
+    _slideUp(hide);
+
+    element.addEventListener('mouseenter', function () {
+      _slideDown(hide);
+    })
+    element.addEventListener('mouseleave', function () {
+      _slideUp(hide);
+    })
+  });
+}
+
+// Показываем кнопку вверх
+const above = document.querySelector('.above');
+if (above) {
+  let scrollDirection = 0;
+  window.addEventListener('scroll', function (e) {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > 1000 && scrollTop < scrollDirection) {
+      above.classList.add('_show');
+    } else {
+      above.classList.remove('_show');
+    }
+
+    scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
+  });
+}
+
 window.addEventListener('DOMContentLoaded', function () {
   setTimeout(() => {
     updateDistanceСatalogToTop();
+
+    const eventsCards = document.querySelectorAll('.events-card');
+    if (eventsCards.length > 0 && !isMobile.any())
+      updateEvents(eventsCards);
   }, 500);
 });
 window.addEventListener('scroll', function () {

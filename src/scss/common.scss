@@ -2,6 +2,20 @@
 h,
 .title-h {
   &1 {
+    font-family: $fontSecond;
+    line-height: math.div(64, 59);
+
+    @media (min-width: $mobile) {
+      @include adaptiveValue("font-size", 59, 42, 0, 1440, 768);
+    }
+    @media (max-width: $mobile) {
+      @include adaptiveValue("font-size", 42, 28, 0, 768, 320);
+    }
+  }
+  &2 {
+    font-family: $fontSecond;
+    line-height: math.div(56, 44);
+    @include adaptiveValue("font-size", 44, 26, 0, 1440, 768);
   }
 }
 
@@ -10,15 +24,6 @@ video {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-section {
-  @include adaptiveValue("margin-top", 100, 40);
-  @include adaptiveValue("margin-bottom", 100, 40);
-
-  &:first-child {
-    @include adaptiveValue("margin-top", 50, 16);
-  }
 }
 
 .icon {
@@ -178,6 +183,19 @@ section {
   }
 }
 
+.section-bg {
+  background-color: var(--section-bg);
+  color: var(--section-color);
+  @include adaptiveValue("padding-top", 64, 32, 0, 1440, 768);
+  @include adaptiveValue("padding-bottom", 64, 32, 0, 1440, 768);
+
+  .swiper__arrow {
+    svg {
+      fill: var(--section-color);
+    }
+  }
+}
+
 .text-link {
   display: inline-flex;
   gap: toRem(12);
@@ -319,6 +337,43 @@ section {
         &:hover {
           opacity: 0.6;
         }
+      }
+    }
+  }
+}
+
+.above {
+  // .above__button
+  &__button {
+    flex: 0 0 toRem(49);
+    width: toRem(49);
+    height: toRem(49);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: toRem(10);
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba($color: #307fcc, $alpha: 0.3);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(300%);
+    transition: $transition ease all 0s;
+    @include adaptiveValue("right", 40, 18);
+    @include adaptiveValue("bottom", 74, 32);
+
+    ._show & {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+      transform: translateX(0%);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba($color: #307fcc, $alpha: 0.6);
       }
     }
   }

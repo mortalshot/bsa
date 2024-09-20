@@ -6,6 +6,7 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	gap: toRem(16);
 	border-radius: toRem(40);
 	border: toRem(1) solid transparent;
 	overflow: hidden;
@@ -20,10 +21,20 @@
 		width: 100%;
 	}
 
+	.icon_link {
+		width: toRem(11);
+		height: toRem(8);
+		flex: 0 0 toRem(11);
+	}
+
 	// .btn_bg-green
 	&_bg-green {
 		background-color: $Green;
 		color: $White;
+
+		svg {
+			fill: $White;
+		}
 
 		@media (any-hover: hover) {
 			transition: $transition ease background-color 0s;

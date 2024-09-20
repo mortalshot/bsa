@@ -92,8 +92,6 @@
 
 .header-top {
 	@media (min-width: $mobile) {
-		padding-top: toRem(15);
-		padding-bottom: toRem(15);
 		position: relative;
 		z-index: 11;
 	}
@@ -111,6 +109,11 @@
 		display: flex;
 		align-items: center;
 
+		@media (min-width: $mobile) {
+			padding-top: toRem(15);
+			padding-bottom: toRem(15);
+			border-bottom: toRem(1) solid $White;
+		}
 		@media (max-width: $mobile) {
 			padding-top: toRem(20);
 			padding-bottom: toRem(20);
@@ -193,7 +196,7 @@
 	position: sticky;
 	top: 0;
 	background-color: var(--page-bg-color);
-	
+
 	// .header-bottom__container
 	&__container {
 	}
@@ -203,7 +206,6 @@
 		@media (min-width: $mobile) {
 			padding-top: toRem(20);
 			padding-bottom: toRem(20);
-			border-top: toRem(1) solid $White;
 			border-bottom: toRem(1) solid $White;
 		}
 	}
@@ -224,13 +226,13 @@
 
 			&:not(:first-child) {
 				@media (min-width: $mobile) {
-					@include adaptiveValue("padding-left", 30, 12, 0, 1280, 768);
+					@include adaptiveValue("padding-left", 20, 12, 0, 1280, 768);
 				}
 			}
 			&:not(:last-child) {
 				@media (min-width: $mobile) {
 					border-right: toRem(1) solid $White;
-					@include adaptiveValue("padding-right", 30, 12, 0, 1280, 768);
+					@include adaptiveValue("padding-right", 20, 12, 0, 1280, 768);
 				}
 				@media (max-width: $mobile) {
 					border-bottom: toRem(1) solid #447aae;
@@ -307,6 +309,11 @@
 		height: toRem(30);
 		border-radius: 50%;
 		overflow: hidden;
+		transition: $transition ease background-color 0s;
+
+		._active & {
+			background-color: $Green;
+		}
 
 		svg {
 			fill: $White;
@@ -318,6 +325,84 @@
 
 	// .search__wrapper
 	&__wrapper {
+		position: absolute;
+		bottom: 0;
+		left: toRem(-5);
+		width: calc(100% + toRem(10));
+		background-color: $White;
+		box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+		border-radius: toRem(8);
+		overflow: hidden;
+		display: flex;
+		justify-content: space-between;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transform: translateY(0);
+		transition: 0.5s ease all 0s;
+		@include adaptiveValue("height", 67, 48, 0, 575, 320);
+
+		._active & {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: all;
+			transform: translateY(95%);
+		}
+	}
+
+	// .search__input
+	&__input {
+		flex: 1;
+
+		&::before {
+			content: "";
+			display: block;
+			width: toRem(16);
+			height: toRem(16);
+			flex: 0 0 toRem(16);
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+			left: toRem(20);
+			transform: translateY(-50%);
+			background: url(../img/icons/search.svg) no-repeat center/contain;
+		}
+
+		input {
+			height: 100%;
+			font-size: toRem(16);
+			line-height: math.div(20, 16);
+			padding: toRem(20) toRem(20) toRem(20) toRem(52);
+			outline: 0;
+			color: $mainColor;
+
+			&::placeholder {
+				color: #6a8fb3;
+			}
+		}
+	}
+
+	// .search__submit
+	&__submit {
+		button {
+			background-color: #b3daff;
+			color: #1265b5;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			padding: toRem(20) toRem(40);
+			@include adaptiveValue("padding-left", 40, 20, 0, 575, 320);
+			@include adaptiveValue("padding-right", 40, 20, 0, 575, 320);
+
+			@media (any-hover: hover) {
+				transition: $transition ease background-color 0s;
+				&:hover {
+					background-color: #8bc2f5;
+				}
+			}
+		}
 	}
 }
 
@@ -768,6 +853,7 @@
 	&__button {
 		display: flex;
 		align-items: center;
+		outline: 0;
 		@include adaptiveValue("column-gap", 20, 12, 0, 992, 768);
 
 		@media (max-width: $mobile) {
@@ -1116,7 +1202,7 @@
 	&__body {
 		@media (min-width: $mobile) {
 			background-color: $White;
-			display: none;
+			display: none !important;
 			position: absolute;
 			opacity: 0;
 			visibility: hidden;
@@ -1141,6 +1227,14 @@
 		}
 		@media (max-width: $mobile) {
 			padding-bottom: toRem(20);
+		}
+	}
+
+	&._active {
+		.menu-var1__item._active {
+			.menu-var1__body {
+				display: block !important;
+			}
 		}
 	}
 }

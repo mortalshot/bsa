@@ -47,7 +47,7 @@
 
 .swiper-pagination {
 	position: absolute;
-	text-align: center;
+	text-align: left;
 	transition: 0.3s opacity;
 	transform: translate3d(0, 0, 0);
 	z-index: 10;
@@ -141,7 +141,7 @@ button.swiper-pagination-bullet {
 }
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-	margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
+	margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 5px);
 }
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
