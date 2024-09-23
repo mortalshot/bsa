@@ -9,14 +9,26 @@ textarea {
 	appearance: none;
 }
 .input {
+	padding: toRem(8) toRem(24);
+	background-color: #f7f8fc;
+	border: toRem(1) solid #d8e1eb;
 	border-radius: 0 !important;
 	width: 100%;
 	caret-color: inherit;
+	outline: 0;
+	line-height: math.div(20, 16);
+	@include adaptiveValue("padding-left", 24, 12);
+	@include adaptiveValue("padding-right", 24, 12);
+	@include adaptiveValue("font-size", 16, 14);
+	@include adaptiveValue("min-height", 54, 48);
+
 	&._form-focus {
 	}
+
 	&._form-error {
 	}
 }
+
 .input[placeholder]:not([data-placeholder-nohiden]) {
 	&::placeholder {
 		transition: opacity 0.3s;
@@ -28,5 +40,10 @@ textarea {
 
 textarea.input {
 	resize: none;
-	padding: 0px 0px;
+}
+
+.form__error {
+	margin-top: toRem(4);
+	font-size: toRem(14);
+	color: red;
 }

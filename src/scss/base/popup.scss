@@ -1,6 +1,6 @@
 body::after {
 	content: "";
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba($color: #0d3052, $alpha: 0.79);
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -50,12 +50,45 @@ body::after {
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
+	background-color: $White;
 	padding: 20px;
 	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
+	max-width: toRem(994);
+	border-radius: toRem(8);
+	box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+
 	.lock & {
 		visibility: visible;
+	}
+}
+
+.popup__close {
+	flex: 0 0 toRem(31);
+	width: toRem(31);
+	height: toRem(31);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #dceeff;
+	border-radius: toRem(10);
+	overflow: hidden;
+	position: absolute;
+	right: toRem(10);
+	top: toRem(10);
+	outline: 0;
+	transition: $transition ease background-color 0s;
+
+	img {
+		transition: $transition ease transform 0s;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #dcdfff;
+
+			img {
+				transform: rotate(180deg);
+			}
+		}
 	}
 }

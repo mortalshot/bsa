@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20240920193640">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240923205949">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,7 +104,7 @@
 						</ul>
 
 						<div class="header__button" data-da=".menu__body, 767.98, last">
-							<button type="button" data-popup="request" class="btn btn_bg-green">Apply online</button>
+							<button type="button" data-popup="#message" class="btn btn_bg-green">Apply online</button>
 						</div>
 					</div>
 				</div>
@@ -137,7 +137,7 @@
 						</div>
 
 						<ul class="header-bottom__list menu__list">
-							<li class="menu__item menu-var1">
+							<li class="menu__item menu-var">
 								<button type="button" class="menu__button">
 									<svg class="icon icon_burger">
 										<use xlink:href="img/icons/icons.svg#burger"></use>
@@ -150,9 +150,9 @@
 									</svg>
 								</button>
 
-								<div class="menu-var1__wrapper" data-lp>
-									<div class="menu-var1__inner">
-										<div class="menu-var1__container">
+								<div class="menu-var__wrapper" data-lp>
+									<div class="menu-var__inner">
+										<div class="menu-var__container">
 											<button type="button" class="menu__back">
 												<svg class="icon">
 													<use xlink:href="img/icons/icons.svg#chevron-link"></use>
@@ -161,8 +161,8 @@
 												<span>Study programmes</span>
 											</button>
 
-											<div class="menu-var1__items">
-												<div class="menu-var1__item _active">
+											<div class="menu-var__items">
+												<div class="menu-var__item">
 													<a href="">
 														<span>Shorty-cycle study programmes</span>
 
@@ -171,7 +171,7 @@
 														</svg>
 													</a>
 
-													<div class="menu-var1__body">
+													<div class="menu-var__body">
 														<div class="program-template">
 															<div class="program-template__heading _heading">
 																<div class="program-template__caption">Select programme</div>
@@ -224,7 +224,7 @@
 													</div>
 												</div>
 
-												<div class="menu-var1__item">
+												<div class="menu-var__item">
 													<a href="">
 														<span>Bachelor study programmes</span>
 
@@ -233,7 +233,7 @@
 														</svg>
 													</a>
 
-													<div class="menu-var1__body">
+													<div class="menu-var__body">
 														<div class="program-template">
 															<div class="program-template__heading _heading">
 																<div class="program-template__caption">Select programme</div>
@@ -502,7 +502,7 @@
 													</div>
 												</div>
 
-												<div class="menu-var1__item">
+												<div class="menu-var__item _active">
 													<a href="">
 														<span>Master study programmes</span>
 
@@ -511,16 +511,33 @@
 														</svg>
 													</a>
 
-													<div class="menu-var1__body">
-														<div class="program-template">
-															<div class="_content">
-																<p>Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Все если это взгляд, агентство составитель текстами заглавных буквоград своих бросил текстов знаках точках меня!</p>
+													<div class="menu-var__body">
+														<div class="program-template2">
+															<div class="program-template2__content">
+																<div class="program-template2__body">
+																	<div class="program-template__caption">Select programme</div>
+
+																	<ul class="program-template2__list">
+																		<li> <a href="">Design</a> </li>
+																		<li> <a href="">Law Science (Professional master study programme)</a> </li>
+																		<li> <a href="">Law Science (Academic master study programme)</a> </li>
+																		<li> <a href="">Psychology</a> </li>
+																		<li> <a href="">International finance and economics</a> </li>
+																		<li> <a href="">European studies</a> </li>
+																		<li> <a href="">Management of communication in the leisure <br> and entertaiment industry</a> </li>
+																		<li> <a href="">Business management and administration</a> </li>
+																	</ul>
+																</div>
+															</div>
+
+															<div class="program-template2__bg _bg">
+																<img src="img/menu-bg1.jpg" alt="" loading="lazy">
 															</div>
 														</div>
 													</div>
 												</div>
 
-												<div class="menu-var1__item">
+												<div class="menu-var__item">
 													<a href="">
 														<span>Doctoral study programmes</span>
 
@@ -529,7 +546,7 @@
 														</svg>
 													</a>
 
-													<div class="menu-var1__body">
+													<div class="menu-var__body">
 														<div class="program-template">
 															<div class="_content">
 																<p>Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Все если это взгляд, агентство составитель текстами заглавных буквоград своих бросил текстов знаках точках меня!</p>
@@ -559,7 +576,7 @@
 											<use xlink:href="img/icons/icons.svg#chevron-link"></use>
 										</svg>
 
-										<span>for students</span>
+										<span>Admission</span>
 									</button>
 
 									<ul>
@@ -590,7 +607,7 @@
 							</li>
 
 							<li class="menu__item menu__item_has-children">
-								<a href="">Admission</a>
+								<a href="programmes.html">Admission</a>
 
 								<button type="button" class="menu__arrow menu__arrow_main" tabindex="-1">
 									<svg class="icon icon_select">
@@ -1160,7 +1177,7 @@
 					</div>
 
 					<div class="features__button">
-						<button type="button" class="btn btn_bg-green">
+						<button type="button" class="btn btn_bg-green" data-popup="#message">
 							<span>Apply online</span>
 							<svg class="icon icon_link">
 								<use xlink:href="img/icons/icons.svg#text-link"></use>
@@ -1446,8 +1463,74 @@
 				<img src="img/icons/above.svg" alt="" loading="lazy">
 			</a>
 		</div>
+
+		<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Popup content
+			</div>
+		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240920193640"></script>
+</div> -->
+
+		<div id="message" aria-hidden="true" class="popup popup_message">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<img src="img/icons/close.svg" alt="" loading="lazy">
+					</button>
+					<div class="popup__text">
+						<div class="message-popup">
+							<div class="message-popup__left">
+								<div class="message-popup__image">
+									<img src="img/message-popup.png" alt="" loading="lazy">
+								</div>
+
+								<div class="message-popup__body">
+									<div class="message-popup__title">Send message</div>
+									<div class="message-popup__subtitle">Feel free to ask anything about
+										our college</div>
+								</div>
+							</div>
+							<div class="message-popup__right">
+								<form action="">
+									<div class="form__row">
+										<div class="col-12">
+											<div class="form__item">
+												<input type="text" name="message-name" placeholder="Your name" class="input" data-validate data-required="" data-error="This field is required" required />
+											</div>
+										</div>
+
+										<div class="col-12">
+											<div class="form__item">
+												<input type="email" name="message-mail" placeholder="E-mail" class="input" data-validate data-required="email" data-error="Incorrect email entered" required />
+											</div>
+										</div>
+
+										<div class="col-12">
+											<div class="form__item">
+												<textarea name="message-text" placeholder="Message" class="input" rows="5" data-autoheight></textarea>
+											</div>
+										</div>
+
+										<div class="col-12">
+											<div class="form__item">
+												<button type="submit" class="btn btn_bg-green">Send message</button>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script src="js/app.min.js?_v=20240923205949"></script>
 </body>
 
 </html>

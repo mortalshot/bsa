@@ -1,19 +1,5 @@
 //<FORM>
 // Сниппет (HTML):
-.form {
-	&__row {
-	}
-	&__column {
-	}
-	&__line {
-	}
-	&__input {
-	}
-	&__button {
-	}
-	&__error {
-	}
-}
 //</FORM>
 
 // <BUTTONS>
@@ -54,7 +40,7 @@
 
 // <col>
 // Снипет (HTML):
-// @import "col";
+@import "col";
 
 // contact-form7
 // .wpcf7-spinner {

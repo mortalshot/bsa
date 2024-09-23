@@ -48,16 +48,16 @@ document.addEventListener('click', function (e) {
     }
   }
 
-  if (targetElement.closest('.menu-var1__item>a')) {
+  if (targetElement.closest('.menu-var__item>a')) {
     e.preventDefault();
-    const parent = targetElement.closest('.menu-var1__item');
+    const parent = targetElement.closest('.menu-var__item');
 
     if (window.innerWidth > 767.98) {
-      removeClasses(document.querySelectorAll('.menu-var1__item._active'), "_active");
+      removeClasses(document.querySelectorAll('.menu-var__item._active'), "_active");
       parent.classList.add('_active');
     } else {
       parent.classList.toggle('_active');
-      const parentBody = parent.querySelector('.menu-var1__body');
+      const parentBody = parent.querySelector('.menu-var__body');
       _slideToggle(parentBody);
     }
   }
@@ -84,12 +84,12 @@ if (menuSublist.length > 0 && window.innerWidth < 767.98) {
     _slideUp(sublist);
   });
 }
-const headerCatalogMenu = document.querySelector('.menu-var1__items');
+const headerCatalogMenu = document.querySelector('.menu-var__items');
 if (headerCatalogMenu) {
   const elements = Array.from(headerCatalogMenu.children);
 
   elements.forEach(element => {
-    const elementBody = element.querySelector('.menu-var1__body');
+    const elementBody = element.querySelector('.menu-var__body');
 
     if (window.innerWidth < 767.98) {
       element.classList.remove('_active');
@@ -122,6 +122,37 @@ function updateEvents(cards) {
     })
   });
 }
+
+// Фильтрация
+const filters = document.querySelectorAll('.level-filter__input');
+const items = document.querySelectorAll('.program-item');
+
+if (filters.length > 0) {
+  filters.forEach(element => {
+    element.addEventListener('change', function () {
+      const parent = element.closest('.level-filter');
+      let parentCategory = parent.dataset.category;
+
+      if (parentCategory) {
+        items.forEach(item => {
+          let itemDataValue = item.dataset.category;
+
+          if (itemDataValue === parentCategory) {
+            item.style.display = "grid"
+          } else {
+            item.style.display = "none"
+          }
+        });
+      } else {
+        items.forEach(item => {
+          item.style.display = "grid"
+        })
+      }
+    })
+  });
+}
+
+
 
 // Показываем кнопку вверх
 const above = document.querySelector('.above');

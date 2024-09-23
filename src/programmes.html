@@ -1,203 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/_head.htm',{
-"title":"Home page"
+"title":"Study programmes"
 })
 
 <body style="--page-bg-color: #1A969E;">
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-			<section class="features section-bg" style="--section-bg: #fff; --section-color: #1B232B;">
-				<div class="features__bg">
+			<section class="inner">
+				<div class="inner__bg">
 					<picture>
-						<source srcset="@img/features/features-bg-big.png" media="(min-width: 1639.98px)">
-						<img src="@img/features/features-bg.png" alt="" loading="lazy">
+						<source srcset="@img/inner1-bg-big.svg" media="(min-width: 1639.98px)">
+						<img src="@img/inner1-bg.svg" alt="" loading="lazy">
 					</picture>
 				</div>
 
-				<div class="features__container">
-					<div class="features__heading _content">
-						<h2>WHY CHOOSE <strong>BIA?</strong></h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a augue bibendum, tincidunt lectus nec, feugiat velit. Mauris laoreet mi sit amet risus semper, eget sagittis enim malesuada. Pellentesque eu nisi ac orci pretium gravida. Proin faucibus efficitur mi. Integer volutpat interdum lacus. Pellentesque in cursus felis, eget dictum erat.</p>
-					</div>
-
-					<div class="features__slider swiper">
-						<div class="features__wrapper swiper-wrapper">
-							<div class="features__slide swiper-slide features-item">
-								<div class="features-item__front">
-									<div class="features-item__icon">
-										<img src="@img/features/features1-icon.svg" alt="" loading="lazy">
-									</div>
-
-									<div class="features-item__caption">LONG-TERM <br> TRADITIONS</div>
-								</div>
-
-								<div class="features-item__back">
-									<div class="features-item__title">LONG-TERM TRADITIONS</div>
-									<div class="features-item__text _content">
-										<p>Lorem ipsum dolor sit amet. </p>
-									</div>
-								</div>
-							</div>
-
-							<div class="features__slide swiper-slide features-item">
-								<div class="features-item__front">
-									<div class="features-item__icon">
-										<img src="@img/features/features2-icon.svg" alt="" loading="lazy">
-									</div>
-
-									<div class="features-item__caption">EUROPEAN <br> UNIVERSITY</div>
-								</div>
-
-								<div class="features-item__back">
-									<div class="features-item__title">WIDE SELECTION OF A STUDY PROGEAMMES</div>
-									<div class="features-item__text _content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. </p>
-									</div>
-								</div>
-							</div>
-
-							<div class="features__slide swiper-slide features-item">
-								<div class="features-item__front">
-									<div class="features-item__icon">
-										<img src="@img/features/features3-icon.svg" alt="" loading="lazy">
-									</div>
-
-									<div class="features-item__caption">WIDE SELECTION OF A STUDY PROGEAMMES</div>
-								</div>
-
-								<div class="features-item__back">
-									<div class="features-item__title">WIDE SELECTION OF A STUDY PROGEAMMES</div>
-									<div class="features-item__text _content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. </p>
-									</div>
-								</div>
-							</div>
-
-							<div class="features__slide swiper-slide features-item">
-								<div class="features-item__front">
-									<div class="features-item__icon">
-										<img src="@img/features/features4-icon.svg" alt="" loading="lazy">
-									</div>
-
-									<div class="features-item__caption">REASONABLE <br> COST OF LIVING</div>
-								</div>
-
-								<div class="features-item__back">
-									<div class="features-item__title">WIDE SELECTION OF A STUDY PROGEAMMES</div>
-									<div class="features-item__text _content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. </p>
-									</div>
-								</div>
-							</div>
+				<div class="inner__container">
+					<div class="inner__breadcrumbs breadcrumbs">
+						<div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+							<span class="site-breadcrumbs__link shake-animation" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+								<a href="home.html" itemprop="item">
+									<span itemprop="name">
+										<svg class="icon">
+											<use xlink:href="@img/icons/icons.svg#home"></use>
+										</svg>
+									</span>
+								</a>
+							</span>
+							<span class="site-breadcrumbs__separator">/</span>
+							<span class="site-breadcrumbs__title">Study programmes</span>
 						</div>
-
-						<div class="swiper-pagination"></div>
 					</div>
 
-					<div class="features__button">
-						<button type="button" class="btn btn_bg-green">
-							<span>Apply online</span>
-							<svg class="icon icon_link">
-								<use xlink:href="@img/icons/icons.svg#text-link"></use>
-							</svg>
-						</button>
+					<div class="inner__heading _content">
+						<h1>Study programmes</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					</div>
 				</div>
 			</section>
 
-			<section class="career section-bg" style="--section-bg: #15528E; --section-color: #fff;">
-				<div class="career__container">
-					<div class="career__heading _content">
-						<h2><strong>BUILD YOUR CAREER</strong> AS OUR ALUMNI</h2>
-						<p>In our teaching, we focus on results and your future success. We hope you do too. Here is a list of just a few companies where our alumni work.</p>
-					</div>
+			<section class="programmes">
+				<div class="programmes__level programmes-level">
+					<div class="programmes__container">
+						<div class="programmes-level__row">
+							<div class="programmes-level__heading">
+								<div class="programmes-level__title">Level selection</div>
+								<div class="programmes-level__subtitle">Unfilter the level of programm you require:</div>
+							</div>
 
-					<div class="career__slider-wrapper">
-						<button type="button" class="swiper__arrow swiper__arrow_prev">
-							<svg class="icon">
-								<use xlink:href="@img/icons/icons.svg#arrow-slider"></use>
-							</svg>
-						</button>
-
-						<div class="career__slider swiper">
-							<div class="career__wrapper swiper-wrapper">
-								<div class="career__slide swiper-slide career-item">
-									<a href="" class="career-item__wrapper">
-										<div class="career-item__image">
-											<img src="@img/career/career-logo1.jpg" alt="" loading="lazy">
-										</div>
-									</a>
+							<div class="programmes-level__filters">
+								<div class="programmes-level__filter level-filter" data-category="College">
+									<input hidden id="level-filter1" class="level-filter__input" type="radio" value="college" name="level-filter">
+									<label for="level-filter1" class="level-filter__label"><span class="level-filter__text">College</span></label>
 								</div>
-
-								<div class="career__slide swiper-slide career-item">
-									<div class="career-item__wrapper">
-										<a href="" class="career-item__image">
-											<img src="@img/career/career-logo2.jpg" alt="" loading="lazy">
-										</a>
-									</div>
+								<div class="programmes-level__filter level-filter" data-category="Bachelor">
+									<input hidden id="level-filter2" class="level-filter__input" type="radio" value="bachelor" name="level-filter">
+									<label for="level-filter2" class="level-filter__label"><span class="level-filter__text">Bachelor</span></label>
 								</div>
-
-								<div class="career__slide swiper-slide career-item">
-									<a href="" class="career-item__wrapper">
-										<div class="career-item__image">
-											<img src="@img/career/career-logo1.jpg" alt="" loading="lazy">
-										</div>
-									</a>
+								<div class="programmes-level__filter level-filter" data-category="Masters">
+									<input hidden id="level-filter3" class="level-filter__input" type="radio" value="Masters" name="level-filter">
+									<label for="level-filter3" class="level-filter__label"><span class="level-filter__text">Masters</span></label>
 								</div>
-
-								<div class="career__slide swiper-slide career-item">
-									<div class="career-item__wrapper">
-										<a href="" class="career-item__image">
-											<img src="@img/career/career-logo2.jpg" alt="" loading="lazy">
-										</a>
-									</div>
-								</div>
-
-								<div class="career__slide swiper-slide career-item">
-									<a href="" class="career-item__wrapper">
-										<div class="career-item__image">
-											<img src="@img/career/career-logo1.jpg" alt="" loading="lazy">
-										</div>
-									</a>
-								</div>
-
-								<div class="career__slide swiper-slide career-item">
-									<div class="career-item__wrapper">
-										<a href="" class="career-item__image">
-											<img src="@img/career/career-logo2.jpg" alt="" loading="lazy">
-										</a>
-									</div>
-								</div>
-
-								<div class="career__slide swiper-slide career-item">
-									<a href="" class="career-item__wrapper">
-										<div class="career-item__image">
-											<img src="@img/career/career-logo1.jpg" alt="" loading="lazy">
-										</div>
-									</a>
-								</div>
-
-								<div class="career__slide swiper-slide career-item">
-									<div class="career-item__wrapper">
-										<a href="" class="career-item__image">
-											<img src="@img/career/career-logo2.jpg" alt="" loading="lazy">
-										</a>
-									</div>
+								<div class="programmes-level__filter level-filter" data-category="Doctorate">
+									<input hidden id="level-filter4" class="level-filter__input" type="radio" value="Doctorate" name="level-filter">
+									<label for="level-filter4" class="level-filter__label"><span class="level-filter__text">Doctorate</span></label>
 								</div>
 							</div>
-							<div class="swiper-pagination"></div>
+
+							<div class="programmes-level__all">
+								<div class="programmes-level__filter level-filter" data-category="">
+									<input hidden id="level-reset" class="level-filter__input" type="radio" value="Select All" name="level-filter" checked>
+									<label for="level-reset" class="level-filter__label"><span class="level-filter__text">Select All</span></label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="programmes__main">
+					<div class="programmes__container">
+						<h2 class="programmes__title">List of programmes</h2>
+
+						<div class="programmes__items">
+							<article class="programmes__item program-item" data-category="College">
+								<div class="program-item__left">
+									<div class="events-card__tags">
+										<div class="events-card__tag">College</div>
+									</div>
+
+									<div class="program-item__preview _bg">
+										<img src="@img/program/program1-preview.jpg" alt="" loading="lazy">
+									</div>
+								</div>
+
+								<div class="program-item__main">
+									<div class="program-item__body">
+										<h3 class="program-item__title">Jurisprudence</h3>
+										<div class="program-item__excerpt _content">
+											<p>Descriptive content. More information about the selected programm goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										</div>
+									</div>
+									<div class="program-item__footer">
+										<div class="program-item__type">
+											<div class="program-item__caption">Type of education</div>
+
+											<div class="program-item__features">
+												<div class="program-item__feature program-feature">
+													<div class="program-feature__icon">
+														<img src="@img/icons/clock.svg" alt="" loading="lazy">
+													</div>
+													<div class="program-feature__caption">Full-time</div>
+												</div>
+
+												<div class="program-item__feature program-feature">
+													<div class="program-feature__icon">
+														<img src="@img/icons/moon.svg" alt="" loading="lazy">
+													</div>
+													<div class="program-feature__caption">Evening</div>
+												</div>
+
+												<div class="program-item__feature program-feature">
+													<div class="program-feature__icon">
+														<img src="@img/icons/computer.svg" alt="" loading="lazy">
+													</div>
+													<div class="program-feature__caption">Distance</div>
+												</div>
+											</div>
+										</div>
+
+										<a href="" class="program-item__link"></a>
+									</div>
+								</div>
+							</article>
+
+							<article class="programmes__item program-item" data-category="Bachelor">
+								<div class="program-item__left">
+									<div class="events-card__tags">
+										<div class="events-card__tag">Bachelor</div>
+									</div>
+
+									<div class="program-item__preview _bg">
+										<img src="@img/program/program1-preview.jpg" alt="" loading="lazy">
+									</div>
+								</div>
+
+								<div class="program-item__main">
+									<div class="program-item__body">
+										<h3 class="program-item__title">Jurisprudence</h3>
+										<div class="program-item__excerpt _content">
+											<p>Descriptive content. More information about the selected programm goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										</div>
+									</div>
+									<div class="program-item__footer">
+										<div class="program-item__type">
+											<div class="program-item__caption">Type of education</div>
+
+											<div class="program-item__features">
+												<div class="program-item__feature program-feature">
+													<div class="program-feature__icon">
+														<img src="@img/icons/clock.svg" alt="" loading="lazy">
+													</div>
+													<div class="program-feature__caption">Full-time</div>
+												</div>
+
+												<div class="program-item__feature program-feature">
+													<div class="program-feature__icon">
+														<img src="@img/icons/moon.svg" alt="" loading="lazy">
+													</div>
+													<div class="program-feature__caption">Evening</div>
+												</div>
+
+												<div class="program-item__feature program-feature">
+													<div class="program-feature__icon">
+														<img src="@img/icons/computer.svg" alt="" loading="lazy">
+													</div>
+													<div class="program-feature__caption">Distance</div>
+												</div>
+											</div>
+										</div>
+
+										<a href="" class="program-item__link"></a>
+									</div>
+								</div>
+							</article>
+
+							<article class="programmes__item program-item" data-category="Masters">
+								<div class="program-item__left">
+									<div class="events-card__tags">
+										<div class="events-card__tag">Masters</div>
+									</div>
+
+									<div class="program-item__preview _bg">
+										<img src="@img/program/program1-preview.jpg" alt="" loading="lazy">
+									</div>
+								</div>
+
+								<div class="program-item__main">
+									<div class="program-item__body">
+										<h3 class="program-item__title">Jurisprudence</h3>
+										<div class="program-item__excerpt _content">
+											<p>Descriptive content. More information about the selected programm goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										</div>
+									</div>
+									<div class="program-item__footer">
+										<div class="program-item__type">
+											<div class="program-item__caption">Type of education</div>
+
+											<div class="program-item__features">
+												<div class="program-item__feature program-feature">
+													<div class="program-feature__icon">
+														<img src="@img/icons/clock.svg" alt="" loading="lazy">
+													</div>
+													<div class="program-feature__caption">Full-time</div>
+												</div>
+
+												<div class="program-item__feature program-feature">
+													<div class="program-feature__icon">
+														<img src="@img/icons/moon.svg" alt="" loading="lazy">
+													</div>
+													<div class="program-feature__caption">Evening</div>
+												</div>
+
+												<div class="program-item__feature program-feature">
+													<div class="program-feature__icon">
+														<img src="@img/icons/computer.svg" alt="" loading="lazy">
+													</div>
+													<div class="program-feature__caption">Distance</div>
+												</div>
+											</div>
+										</div>
+
+										<a href="" class="program-item__link"></a>
+									</div>
+								</div>
+							</article>
+
+							<article class="programmes__item program-item" data-category="Doctorate">
+								<div class="program-item__left">
+									<div class="events-card__tags">
+										<div class="events-card__tag">Doctorate</div>
+									</div>
+
+									<div class="program-item__preview _bg">
+										<img src="@img/program/program1-preview.jpg" alt="" loading="lazy">
+									</div>
+								</div>
+
+								<div class="program-item__main">
+									<div class="program-item__body">
+										<h3 class="program-item__title">Jurisprudence</h3>
+										<div class="program-item__excerpt _content">
+											<p>Descriptive content. More information about the selected programm goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+										</div>
+									</div>
+									<div class="program-item__footer">
+										<div class="program-item__type">
+											<div class="program-item__caption">Type of education</div>
+
+											<div class="program-item__features">
+												<div class="program-item__feature program-feature">
+													<div class="program-feature__icon">
+														<img src="@img/icons/clock.svg" alt="" loading="lazy">
+													</div>
+													<div class="program-feature__caption">Full-time</div>
+												</div>
+
+												<div class="program-item__feature program-feature">
+													<div class="program-feature__icon">
+														<img src="@img/icons/moon.svg" alt="" loading="lazy">
+													</div>
+													<div class="program-feature__caption">Evening</div>
+												</div>
+
+												<div class="program-item__feature program-feature">
+													<div class="program-feature__icon">
+														<img src="@img/icons/computer.svg" alt="" loading="lazy">
+													</div>
+													<div class="program-feature__caption">Distance</div>
+												</div>
+											</div>
+										</div>
+
+										<a href="" class="program-item__link"></a>
+									</div>
+								</div>
+							</article>
 						</div>
 
-						<button type="button" class="swiper__arrow swiper__arrow_next">
-							<svg class="icon">
-								<use xlink:href="@img/icons/icons.svg#arrow-slider"></use>
-							</svg>
-						</button>
+						<div class="programmes__button">
+							<button type="button" data-popup="#message" class="btn btn_bg-green">
+								<span>Apply online</span>
+								<svg class="icon icon_link">
+									<use xlink:href="@img/icons/icons.svg#text-link"></use>
+								</svg>
+							</button>
+						</div>
+
+						<div class="request">
+							<div class="request__wrapper">
+								<div class="request__left">
+									<div class="request__icon">
+										<img src="@img/icons/question.svg" alt="" loading="lazy">
+									</div>
+
+									<div class="request__body">
+										<div class="request__title">CAN'T FIND WHAT YOU'RE LOOKING FOR?</div>
+										<div class="request__subtitle">If you have a query about graduate admissions at Oxford, we're here to help:</div>
+									</div>
+								</div>
+								<div class="request__button">
+									<button type="button" data-popup="#message" class="btn btn_bg-green">
+										<img src="@img/icons/chat.svg" alt="" loading="lazy">
+										<span>Ask a question</span>
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
+
+			
+			@@include('html/features.htm',{})
+			
+			@@include('html/career.htm',{})
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>

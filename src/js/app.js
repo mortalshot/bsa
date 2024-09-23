@@ -94,7 +94,7 @@ flsFunctions.spollers();
 Документация: https://start-template.ru/modul-popup-vytekayushhie-modalnye-okna-chertogi-frilansera-v3-0-0/
 Сниппет (HTML): pl, pop
 */
-// import './libs/popup.js'
+import './libs/popup.js'
 
 /*
 Модуль анимации (параллакс) объектов во время движения мыши
@@ -109,15 +109,15 @@ import * as flsForms from "./files/forms/forms.js";
 
 /* Работа с полями формы */
 /* Документация: https://start-template.ru/rabota-s-formami-i-elementami-form-chertogi-frilansera-v3-0-0/ */
-/*
+
 flsForms.formFieldsInit({
 	viewPass: false,
 	autoHeight: false
 });
-*/
+
 /* Отправка формы */
 /* Документация: https://start-template.ru/rabota-s-formami-i-elementami-form-chertogi-frilansera-v3-0-0/ */
-// flsForms.formSubmit();
+flsForms.formSubmit();
 
 /* Модуль формы"количество" */
 /* Документация: https://start-template.ru/modul-formy-kolichestvo-chertogi-frilansera-v3-0-0/ */

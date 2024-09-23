@@ -1,9 +1,63 @@
-<div id="popup" aria-hidden="true" class="popup">
+<!-- <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
 			<button data-close type="button" class="popup__close">Закрыть</button>
 			<div class="popup__text">
 				Popup content
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<div id="message" aria-hidden="true" class="popup popup_message">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">
+				<img src="@img/icons/close.svg" alt="" loading="lazy">
+			</button>
+			<div class="popup__text">
+				<div class="message-popup">
+					<div class="message-popup__left">
+						<div class="message-popup__image">
+							<img src="@img/message-popup.png" alt="" loading="lazy">
+						</div>
+
+						<div class="message-popup__body">
+							<div class="message-popup__title">Send message</div>
+							<div class="message-popup__subtitle">Feel free to ask anything about
+								our college</div>
+						</div>
+					</div>
+					<div class="message-popup__right">
+						<form action="">
+							<div class="form__row">
+								<div class="col-12">
+									<div class="form__item">
+										<input type="text" name="message-name" placeholder="Your name" class="input" data-validate data-required="" data-error="This field is required" required />
+									</div>
+								</div>
+
+								<div class="col-12">
+									<div class="form__item">
+										<input type="email" name="message-mail" placeholder="E-mail" class="input" data-validate data-required="email" data-error="Incorrect email entered" required />
+									</div>
+								</div>
+
+								<div class="col-12">
+									<div class="form__item">
+										<textarea name="message-text" placeholder="Message" class="input" rows="5" data-autoheight ></textarea>
+									</div>
+								</div>
+
+								<div class="col-12">
+									<div class="form__item">
+										<button type="submit" class="btn btn_bg-green">Send message</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
