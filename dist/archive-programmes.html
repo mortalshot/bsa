@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20240923205949">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240924161852">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -139,9 +139,7 @@
 						<ul class="header-bottom__list menu__list">
 							<li class="menu__item menu-var">
 								<button type="button" class="menu__button">
-									<svg class="icon icon_burger">
-										<use xlink:href="img/icons/icons.svg#burger"></use>
-									</svg>
+									<div class="menu-var__button"><span></span></div>
 
 									<span>Study programmes</span>
 
@@ -150,7 +148,7 @@
 									</svg>
 								</button>
 
-								<div class="menu-var__wrapper" data-lp>
+								<div class="menu-var__wrapper">
 									<div class="menu-var__inner">
 										<div class="menu-var__container">
 											<button type="button" class="menu__back">
@@ -530,8 +528,11 @@
 																</div>
 															</div>
 
-															<div class="program-template2__bg _bg">
-																<img src="img/menu-bg1.jpg" alt="" loading="lazy">
+															<div class="program-template2__bg">
+																<picture>
+																	<source srcset="img/menu-bg1-big.jpg" media="(min-width: 1639.98px)">
+																	<img src="img/menu-bg1.jpg" alt="" loading="lazy">
+																</picture>
 															</div>
 														</div>
 													</div>
@@ -562,7 +563,7 @@
 							</li>
 
 							<li class="menu__item menu__item_has-children">
-								<a href="programmes.html">for students</a>
+								<a href="archive-programmes.html">for students</a>
 
 								<button type="button" class="menu__arrow menu__arrow_main" tabindex="-1">
 									<svg class="icon icon_select">
@@ -607,7 +608,7 @@
 							</li>
 
 							<li class="menu__item menu__item_has-children">
-								<a href="programmes.html">Admission</a>
+								<a href="archive-programmes.html">Admission</a>
 
 								<button type="button" class="menu__arrow menu__arrow_main" tabindex="-1">
 									<svg class="icon icon_select">
@@ -912,7 +913,7 @@
 											</div>
 										</div>
 
-										<a href="" class="program-item__link"></a>
+										<a href="single-programmes.html" class="program-item__link"></a>
 									</div>
 								</div>
 							</article>
@@ -963,7 +964,7 @@
 											</div>
 										</div>
 
-										<a href="" class="program-item__link"></a>
+										<a href="single-programmes.html" class="program-item__link"></a>
 									</div>
 								</div>
 							</article>
@@ -1014,7 +1015,7 @@
 											</div>
 										</div>
 
-										<a href="" class="program-item__link"></a>
+										<a href="single-programmes.html" class="program-item__link"></a>
 									</div>
 								</div>
 							</article>
@@ -1065,7 +1066,7 @@
 											</div>
 										</div>
 
-										<a href="" class="program-item__link"></a>
+										<a href="single-programmes.html" class="program-item__link"></a>
 									</div>
 								</div>
 							</article>
@@ -1398,7 +1399,7 @@
 							<div class="footer-contact">
 								<div class="footer__title">Write us</div>
 								<div class="footer-contact__button">
-									<button type="button" class="btn btn_bg-blue">
+									<button type="button" data-popup="#message" class="btn btn_bg-blue">
 										<svg class="icon">
 											<use xlink:href="img/icons/icons.svg#bubble"></use>
 										</svg>
@@ -1459,7 +1460,7 @@
 								<ul>
 									<li><a href="">Sitemap</a></li>
 									<li><a href="">Privacy Policy</a></li>
-									<li><a href="">Cookie Policy</a></li>
+									<li><a href="" data-popup="#cookiePolicy">Cookie Policy</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -1484,7 +1485,9 @@
 		<!-- <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
+			<button data-close type="button" class="popup__close">
+				<img src="img/icons/close.svg" alt="" loading="lazy">
+			</button>
 			<div class="popup__text">
 				Popup content
 			</div>
@@ -1546,8 +1549,38 @@
 			</div>
 		</div>
 
+		<div id="cookiePolicy" aria-hidden="true" class="popup popup_cookie popup_bottom">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup__text">
+						<div class="cookie">
+							<div class="cookie__bg">
+								<img src="img/cookie-bg.svg" alt="" loading="lazy">
+							</div>
+
+							<div class="cookie__content">
+								<div class="cookie__text _content">
+									<p>We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.</p>
+								</div>
+
+								<div class="cookie__actions">
+									<div class="cookie__button">
+										<button data-close type="button" class="btn btn_bg-green">I accept</button>
+									</div>
+
+									<div class="cookie__button">
+										<a href="" class="btn btn_border-blue">Cookie policy</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
-	<script src="js/app.min.js?_v=20240923205949"></script>
+	<script src="js/app.min.js?_v=20240924161852"></script>
 </body>
 
 </html>

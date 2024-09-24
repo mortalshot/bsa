@@ -16,6 +16,7 @@
 	line-height: 1;
 	padding: toRem(20) toRem(40);
 	min-height: toRem(62);
+	outline: 0;
 
 	@media (max-width: $mobileSmall) {
 		width: 100%;
@@ -39,7 +40,7 @@
 		@media (any-hover: hover) {
 			transition: $transition ease background-color 0s;
 			&:hover {
-				background-color: #20A94E;
+				background-color: #20a94e;
 			}
 		}
 	}
@@ -66,6 +67,21 @@
 			transition: $transition ease background-color 0s;
 			&:hover {
 				background-color: rgba($color: $White, $alpha: 0.1);
+			}
+		}
+	}
+
+	// .btn_border-blue
+	&_border-blue {
+		border: toRem(1) solid #a8c3de;
+		background-color: $White;
+		color: $Blue3;
+
+		@media (any-hover: hover) {
+			transition: $transition ease all 0s;
+			&:hover {
+				border-color: $Blue3;
+				background-color: #edf6ff;
 			}
 		}
 	}

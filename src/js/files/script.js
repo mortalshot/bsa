@@ -98,6 +98,18 @@ if (headerCatalogMenu) {
   });
 }
 
+// Добавляем тень для шапки
+const headerBottom = document.querySelector('.header-bottom');
+if (window.innerWidth >= 768 && headerBottom) {
+  window.addEventListener('scroll', function () {
+    if (window.scrollY == headerBottom.offsetTop) {
+      headerBottom.classList.add('header_sticky');
+    } else {
+      headerBottom.classList.remove('header_sticky');
+    }
+  });
+}
+
 // Определяем расстояние от низа header-bottom до верха экрана при скролле:
 function updateDistanceСatalogToTop() {
   var headerBottom = document.querySelector('.header-bottom');
@@ -152,8 +164,6 @@ if (filters.length > 0) {
   });
 }
 
-
-
 // Показываем кнопку вверх
 const above = document.querySelector('.above');
 if (above) {
@@ -176,8 +186,9 @@ window.addEventListener('DOMContentLoaded', function () {
     updateDistanceСatalogToTop();
 
     const eventsCards = document.querySelectorAll('.events-card');
-    if (eventsCards.length > 0 && !isMobile.any())
+    if (eventsCards.length > 0 && !isMobile.any()) {
       updateEvents(eventsCards);
+    }
   }, 500);
 });
 window.addEventListener('scroll', function () {

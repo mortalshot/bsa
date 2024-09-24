@@ -119,9 +119,7 @@
 				<ul class="header-bottom__list menu__list">
 					<li class="menu__item menu-var">
 						<button type="button" class="menu__button">
-							<svg class="icon icon_burger">
-								<use xlink:href="@img/icons/icons.svg#burger"></use>
-							</svg>
+							<div class="menu-var__button"><span></span></div>
 
 							<span>Study programmes</span>
 
@@ -130,7 +128,7 @@
 							</svg>
 						</button>
 
-						<div class="menu-var__wrapper" data-lp>
+						<div class="menu-var__wrapper">
 							<div class="menu-var__inner">
 								<div class="menu-var__container">
 									<button type="button" class="menu__back">
@@ -510,8 +508,11 @@
 														</div>
 													</div>
 
-													<div class="program-template2__bg _bg">
-														<img src="@img/menu-bg1.jpg" alt="" loading="lazy">
+													<div class="program-template2__bg">
+														<picture>
+															<source srcset="@img/menu-bg1-big.jpg" media="(min-width: 1639.98px)">
+															<img src="@img/menu-bg1.jpg" alt="" loading="lazy">
+														</picture>
 													</div>
 												</div>
 											</div>
@@ -542,7 +543,7 @@
 					</li>
 
 					<li class="menu__item menu__item_has-children">
-						<a href="programmes.html">for students</a>
+						<a href="archive-programmes.html">for students</a>
 
 						<button type="button" class="menu__arrow menu__arrow_main" tabindex="-1">
 							<svg class="icon icon_select">
@@ -587,7 +588,7 @@
 					</li>
 
 					<li class="menu__item menu__item_has-children">
-						<a href="programmes.html">Admission</a>
+						<a href="archive-programmes.html">Admission</a>
 
 						<button type="button" class="menu__arrow menu__arrow_main" tabindex="-1">
 							<svg class="icon icon_select">

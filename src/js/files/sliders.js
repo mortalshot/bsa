@@ -228,10 +228,6 @@ function initSliders() {
 
 			// Брейкпоинты
 			breakpoints: {
-				480: {
-					slidesPerView: 2,
-					spaceBetween: 24,
-				},
 				575: {
 					slidesPerView: 3,
 					spaceBetween: 20,
@@ -299,8 +295,8 @@ function initSliders() {
 					spaceBetween: 20,
 				},
 				768: {
-					slidesPerView: 3,
-					spaceBetween: 20,
+					slidesPerView: 4,
+					spaceBetween: 0,
 				},
 				992: {
 					slidesPerView: 4,
@@ -362,14 +358,16 @@ function initSliders() {
 
 			// Брейкпоинты
 			breakpoints: {
+				480: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+
 				768: {
 					slidesPerView: 3,
 					spaceBetween: 24,
 				},
-				575: {
-					slidesPerView: 2,
-					spaceBetween: 24,
-				},
+
 				992: {
 					slidesPerView: 5,
 					spaceBetween: 24,

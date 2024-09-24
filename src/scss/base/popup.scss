@@ -92,3 +92,9 @@ body::after {
 		}
 	}
 }
+
+.popup_bottom {
+	.popup__wrapper {
+		justify-content: flex-end;
+	}
+}

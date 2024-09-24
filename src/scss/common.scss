@@ -231,7 +231,7 @@ video {
 
   // .site-breadcrumbs__link
   &__link {
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
   }
 
