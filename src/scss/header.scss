@@ -209,8 +209,8 @@
 	// .header-bottom__menu
 	&__menu {
 		@media (min-width: $mobile) {
-			padding-top: toRem(20);
-			padding-bottom: toRem(20);
+			// padding-top: toRem(20);
+			// padding-bottom: toRem(20);
 			border-bottom: toRem(1) solid $White;
 		}
 	}
@@ -236,8 +236,19 @@
 			}
 			&:not(:last-child) {
 				@media (min-width: $mobile) {
-					border-right: toRem(1) solid $White;
 					@include adaptiveValue("padding-right", 20, 12, 0, 1280, 768);
+
+					&::after {
+						content: '';
+						display: block;
+						width: toRem(1);
+						height: toRem(20);
+						background-color: $White;
+						position: absolute;
+						right: 0;
+						top: 50%;
+						transform: translateY(-50%);
+					}
 				}
 				@media (max-width: $mobile) {
 					border-bottom: toRem(1) solid #447aae;
@@ -252,6 +263,8 @@
 				white-space: nowrap;
 
 				@media (min-width: $mobile) {
+					padding-top: toRem(20);
+					padding-bottom: toRem(20);
 					@include adaptiveValue("font-size", 16, 12, 0, 1280, 768);
 				}
 				@media (max-width: $mobile) {
@@ -663,9 +676,6 @@
 			}
 
 			& > .menu__sublist {
-				@media (min-width: $mobile) {
-					padding-top: toRem(20);
-				}
 
 				& > ul {
 					@media (min-width: $mobile) {
@@ -877,7 +887,7 @@
 				position: absolute;
 				left: 0;
 				bottom: 0;
-				transform: translateY(calc(100% + toRem(20)));
+				transform: translateY(100%);
 				z-index: 1;
 				pointer-events: none;
 				opacity: 0;
@@ -1110,7 +1120,8 @@
 	// .menu-var__items
 	&__items {
 		@media (min-width: $tablet) {
-			height: calc(100vh - var(--distance-catalog-to-top));
+			// height: calc(100vh - var(--distance-catalog-to-top));
+			min-height: 700px;
 			position: relative;
 			display: grid;
 			align-content: flex-start;
@@ -1301,6 +1312,10 @@
 				display: block !important;
 			}
 		}
+
+		& ~ .menu__item  {
+			pointer-events: none;
+		}
 	}
 }
 
@@ -1316,7 +1331,7 @@
 			padding-left: toRem(18);
 			padding-right: toRem(18);
 			border-top: toRem(1) solid $White;
-			background-color: #0B59A4;
+			background-color: #0b59a4;
 
 			.search-form {
 				// .search-form__wrapper
@@ -1660,7 +1675,8 @@
 			@include adaptiveValue("margin-right", -40, -20, 0, 1280, 768);
 		}
 		@media (min-width: $pc) {
-			@include adaptiveValue("margin-right", -396, -78, 0, 1920, 1206);
+			// @include adaptiveValue("margin-right", -396, -78, 0, 1920, 1206);
+			@include adaptiveValue("margin-right", -1035, -78, 0, 3200, 1206);
 		}
 		@media (max-width: $mobile) {
 			display: none;

@@ -5,7 +5,13 @@ h,
     font-family: $fontSecond;
     font-weight: 700;
     line-height: math.div(64, 59);
-    @include adaptiveValue("font-size", 59, 32, 0, 768, 320);
+
+    @media (min-width: $mobile) {
+      @include adaptiveValue("font-size", 59, 42, 0, 1544, 768);
+    }
+    @media (max-width: $mobile) {
+      @include adaptiveValue("font-size", 42, 32, 0, 768, 320);
+    }
   }
   &2 {
     font-family: $fontSecond;
@@ -99,6 +105,10 @@ video {
     li {
       list-style-type: disc;
     }
+  }
+
+  hr {
+    border-bottom: toRem(1) solid #dbe9f2;
   }
 
   .table {
@@ -220,7 +230,7 @@ video {
   align-items: center;
   gap: toRem(12);
   line-height: 150%;
-  @include adaptiveValue("font-size", 18, 12);
+  @include adaptiveValue("font-size", 18, 12, 0, 1544, 768);
 
   svg {
     flex: 0 0 toRem(20);
@@ -233,6 +243,16 @@ video {
   &__link {
     display: inline-flex !important;
     align-items: center;
+
+    @media (max-width: $mobileM) {
+      &:not(:first-child) {
+        display: none !important;
+
+        & + .site-breadcrumbs__separator {
+          display: none;
+        }
+      }
+    }
   }
 
   // .site-breadcrumbs__separator
