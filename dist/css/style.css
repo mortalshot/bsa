@@ -1164,9 +1164,12 @@ video {
 .menu__subitem_has-children>a::after {
   display: none!important
 }
-.menu__subitem_has-children._active .menu__arrow {
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg)
+.menu__subitem_has-children .menu__arrow svg {
+  transition: .3s ease transform 0s
+}
+.menu__subitem_has-children._active .menu__arrow svg {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
 }
 .menu__button {
   display: flex;
@@ -5426,8 +5429,16 @@ button.swiper-pagination-bullet {
   }
   .menu__subitem_has-children .menu__arrow {
     position: absolute;
-    right: 0;
-    top: .875rem
+    left: 0;
+    top: .4375rem;
+    height: 3.625rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 1;
+    padding-top: 0!important;
+    padding-bottom: 0!important
   }
   .menu__subitem_has-children .menu__sublist {
     position: initial;
@@ -5607,6 +5618,9 @@ button.swiper-pagination-bullet {
     margin-top: .625rem;
     position: initial;
     text-align: left
+  }
+  .program-card__wrapper {
+    aspect-ratio: 250/190
   }
   .program-card__title {
     font-size: 1.125rem

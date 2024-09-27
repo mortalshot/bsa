@@ -827,11 +827,21 @@
 			.menu__arrow {
 				@media (max-width: $mobile) {
 					position: absolute;
-					right: 0;
-					top: toRem(14);
+					left: 0;
+					top: toRem(7);
+					height: toRem(58);
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
+					z-index: 1;
+					padding-top: 0 !important;
+					padding-bottom: 0 !important;
 				}
 
 				svg {
+					transition: $transition ease transform 0s;
+
 					@media (min-width: $mobile) {
 						fill: #a6bbce;
 					}
@@ -863,8 +873,8 @@
 			}
 
 			&._active {
-				.menu__arrow {
-					transform: rotate(-90deg);
+				.menu__arrow svg {
+					transform: rotate(180deg);
 				}
 			}
 		}
@@ -1526,6 +1536,9 @@
 		@media (min-width: $tablet) {
 			padding-top: toRem(20);
 			padding-bottom: toRem(20);
+		}
+		@media (max-width: $mobile) {
+			aspect-ratio: 250 / 190;
 		}
 	}
 
