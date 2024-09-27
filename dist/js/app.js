@@ -4841,8 +4841,9 @@
         const contentButton = document.querySelector(".content-button");
         if (window.innerWidth <= 574.98 && contentButton) distanceContentButton(contentButton);
     }));
+    let currentWidth = window.innerWidth;
     window.addEventListener("resize", (function() {
-        location.reload();
+        if (currentWidth < 992 && window.innerWidth >= 992 || currentWidth >= 992 && window.innerWidth < 992 || currentWidth < 768 && window.innerWidth >= 768 || currentWidth >= 768 && window.innerWidth < 768) location.reload();
     }));
     window["FLS"] = true;
     addLoadedClass();
