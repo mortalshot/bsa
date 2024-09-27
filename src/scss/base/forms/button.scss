@@ -63,10 +63,12 @@
 		border: toRem(1) solid $White;
 		color: $White;
 
-		@media (any-hover: hover) {
-			transition: $transition ease background-color 0s;
-			&:hover {
-				background-color: rgba($color: $White, $alpha: 0.1);
+		@media (min-width: $mobile) {
+			@media (any-hover: hover) {
+				transition: $transition ease background-color 0s;
+				&:hover {
+					background-color: rgba($color: $White, $alpha: 0.1);
+				}
 			}
 		}
 	}

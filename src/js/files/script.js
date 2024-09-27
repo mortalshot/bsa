@@ -235,3 +235,7 @@ window.addEventListener('scroll', function () {
     distanceContentButton(contentButton);
   }
 });
+
+window.addEventListener('resize', function () {
+  location.reload();
+})

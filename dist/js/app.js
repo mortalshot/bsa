@@ -4385,7 +4385,7 @@
                 },
                 breakpoints: {
                     480: {
-                        slidesPerView: 2,
+                        slidesPerView: 1.2,
                         spaceBetween: 16
                     },
                     768: {
@@ -4840,6 +4840,9 @@
         updateDistanceСatalogToTop();
         const contentButton = document.querySelector(".content-button");
         if (window.innerWidth <= 574.98 && contentButton) distanceContentButton(contentButton);
+    }));
+    window.addEventListener("resize", (function() {
+        location.reload();
     }));
     window["FLS"] = true;
     addLoadedClass();
