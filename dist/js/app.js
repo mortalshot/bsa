@@ -4515,6 +4515,44 @@
             },
             on: {}
         });
+        if (document.querySelector(".widget-news__slider")) new swiper_core_Swiper(".widget-news__slider", {
+            modules: [ Pagination ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1.13,
+            spaceBetween: 16,
+            autoHeight: false,
+            watchOverflow: true,
+            speed: 800,
+            loop: true,
+            pagination: {
+                el: ".widget-news__slider .swiper-pagination",
+                clickable: true
+            },
+            breakpoints: {
+                480: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 16
+                },
+                575: {
+                    slidesPerView: 1.7,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 16
+                },
+                1280: {
+                    slidesPerView: 3,
+                    spaceBetween: 24
+                }
+            },
+            on: {}
+        });
     }
     window.addEventListener("load", (function(e) {
         initSliders();

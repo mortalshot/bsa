@@ -239,7 +239,7 @@
 					@include adaptiveValue("padding-right", 20, 12, 0, 1280, 768);
 
 					&::after {
-						content: '';
+						content: "";
 						display: block;
 						width: toRem(1);
 						height: toRem(20);
@@ -611,17 +611,19 @@
 	&__item {
 		// .menu__item_has-children
 		&_has-children {
-			@media (any-hover: hover) {
-				transition: $transition ease opacity 0s;
-				&:hover {
-					& > .menu__sublist {
-						opacity: 1;
-						visibility: visible;
-						pointer-events: all;
-					}
+			@media (min-width: $mobile) {
+				@media (any-hover: hover) {
+					transition: $transition ease opacity 0s;
+					&:hover {
+						& > .menu__sublist {
+							opacity: 1;
+							visibility: visible;
+							pointer-events: all;
+						}
 
-					& > .menu__arrow {
-						transform: rotate(180deg);
+						& > .menu__arrow {
+							transform: rotate(180deg);
+						}
 					}
 				}
 			}
@@ -676,7 +678,6 @@
 			}
 
 			& > .menu__sublist {
-
 				& > ul {
 					@media (min-width: $mobile) {
 						border-top: toRem(9) solid #2886df;
@@ -707,6 +708,13 @@
 						transition:
 							$transition ease text-decoration,
 							$transition color 0s;
+
+						@media (any-hover: hover) {
+							&:hover {
+								color: $Black;
+								text-decoration: underline from-font;
+							}
+						}
 					}
 					@media (max-width: $mobile) {
 						width: 100%;
@@ -718,13 +726,6 @@
 						font-size: toRem(14);
 						line-height: math.div(17, 14);
 						text-transform: uppercase;
-					}
-
-					@media (any-hover: hover) {
-						&:hover {
-							color: $Black;
-							text-decoration: underline from-font;
-						}
 					}
 				}
 			}
@@ -740,10 +741,12 @@
 					right: 0;
 
 					.menu__subitem_has-children {
-						@media (any-hover: hover) {
-							&:hover {
-								& > .menu__arrow {
-									transform: rotate(90deg);
+						@media (min-width: $mobile) {
+							@media (any-hover: hover) {
+								&:hover {
+									& > .menu__arrow {
+										transform: rotate(90deg);
+									}
 								}
 							}
 						}
@@ -1088,6 +1091,8 @@
 		overflow-x: hidden;
 		scrollbar-width: thin;
 		scrollbar-color: transparent transparent;
+		overscroll-behavior: none;
+
 		&::-webkit-scrollbar {
 			width: 0;
 			height: 0;
@@ -1121,10 +1126,10 @@
 	&__items {
 		@media (min-width: $tablet) {
 			// height: calc(100vh - var(--distance-catalog-to-top));
-			min-height: 700px;
+			min-height: 653px;
 			position: relative;
 			display: grid;
-			align-content: flex-start;
+			// align-content: flex-start;
 		}
 		@media (min-width: $mobile) and (max-width: $tablet) {
 			display: flex;
@@ -1313,7 +1318,7 @@
 			}
 		}
 
-		& ~ .menu__item  {
+		& ~ .menu__item {
 			pointer-events: none;
 		}
 	}
@@ -1405,6 +1410,9 @@
 		}
 
 		.swiper__arrow {
+			@media (min-width: $mobile) {
+				padding: 0 !important;
+			}
 			@media (max-width: $mobile) {
 				display: none;
 			}
@@ -1509,6 +1517,11 @@
 		flex-direction: column;
 		height: 100%;
 		@include adaptiveValue("row-gap", 32, 24, 0, 1280, 992);
+
+		@media (min-width: $tablet) {
+			padding-top: toRem(20);
+			padding-bottom: toRem(20);
+		}
 	}
 
 	// .program-card__head
@@ -1569,6 +1582,11 @@
 				background-color: $White;
 				font-weight: 500;
 				color: $Blue3;
+			}
+			@media (max-width: $mobileM) {
+				padding: toRem(4) toRem(8);
+				min-height: toRem(27);
+				border: toRem(1) solid $Blue3;
 			}
 
 			&::before {

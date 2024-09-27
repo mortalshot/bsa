@@ -378,6 +378,77 @@ function initSliders() {
 			}
 		});
 	}
+
+	if (document.querySelector('.widget-news__slider')) {
+		new Swiper(".widget-news__slider", {
+			modules: [Pagination],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1.13,
+			spaceBetween: 16,
+			autoHeight: false,
+			watchOverflow: true,
+			speed: 800,
+			loop: true,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Пагинация
+			pagination: {
+				el: '.widget-news__slider .swiper-pagination',
+				clickable: true,
+			},
+
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Брейкпоинты
+			breakpoints: {
+				480: {
+					slidesPerView: 1.5,
+					spaceBetween: 16,
+				},
+				575: {
+					slidesPerView: 1.7,
+					spaceBetween: 20,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 24,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 16,
+				},
+				1280: {
+					slidesPerView: 3,
+					spaceBetween: 24,
+				},
+			},
+
+			on: {
+			}
+		});
+	}
 }
 //Скролл на базе слайдера (по классу swiper scroll для оболочки слайдера)
 function initSlidersScroll() {

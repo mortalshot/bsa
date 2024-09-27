@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20240926094130">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240927164835">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1460,7 +1460,7 @@
 		</footer>
 
 		<div class="above">
-			<a class="above__button" href="#" data-goto=".page">
+			<a class="above__button" href="#" data-goto=".wrapper">
 				<img src="img/icons/above.svg" alt="" loading="lazy">
 			</a>
 		</div>
@@ -1477,6 +1477,17 @@
 		</div>
 	</div>
 </div> -->
+
+		<div id="video" aria-hidden="true" class="popup popup_video">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<img src="img/icons/close.svg" alt="" loading="lazy">
+					</button>
+					<div data-youtube-place class="popup__text"></div>
+				</div>
+			</div>
+		</div>
 
 		<div id="message" aria-hidden="true" class="popup popup_message">
 			<div class="popup__wrapper">
@@ -1563,7 +1574,7 @@
 		</div>
 
 	</div>
-	<script src="js/app.min.js?_v=20240926094130"></script>
+	<script src="js/app.min.js?_v=20240927164835"></script>
 </body>
 
 </html>
