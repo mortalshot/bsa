@@ -237,7 +237,7 @@ window.addEventListener('scroll', function () {
 });
 
 window.addEventListener('resize', function () {
-  if (window.innerWidth <= 992) {
+  if (window.innerWidth <= 1280) {
     location.reload();
   }
 })

@@ -4842,7 +4842,7 @@
         if (window.innerWidth <= 574.98 && contentButton) distanceContentButton(contentButton);
     }));
     window.addEventListener("resize", (function() {
-        if (window.innerWidth <= 992) location.reload();
+        if (window.innerWidth <= 1280) location.reload();
     }));
     window["FLS"] = true;
     addLoadedClass();
