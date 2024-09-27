@@ -3901,6 +3901,18 @@ button.swiper-pagination-bullet {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg)
   }
+  .menu__subitem_has-children {
+    transition: .3s ease opacity 0s
+  }
+  .menu__subitem_has-children:hover .menu__sublist {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all
+  }
+  .menu__subitem_has-children:hover .menu__arrow {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg)
+  }
 }
 @media (min-width:47.99875em)and (min-width:90em) {
   .footer__grid {
@@ -6871,18 +6883,6 @@ button.swiper-pagination-bullet {
   }
   .logo__link:hover {
     opacity: .8
-  }
-  .menu__subitem_has-children {
-    transition: .3s ease opacity 0s
-  }
-  .menu__subitem_has-children:hover .menu__sublist {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all
-  }
-  .menu__subitem_has-children:hover .menu__arrow {
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg)
   }
   .program-card:hover .program-card__bg img {
     -webkit-transform: scale(1.25) translate(20px,-15px);

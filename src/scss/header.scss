@@ -789,17 +789,19 @@
 		&_has-children {
 			position: relative;
 
-			@media (any-hover: hover) {
-				transition: $transition ease opacity 0s;
-				&:hover {
-					.menu__sublist {
-						opacity: 1;
-						visibility: visible;
-						pointer-events: all;
-					}
-
-					.menu__arrow {
-						transform: rotate(-90deg);
+			@media (min-width:$mobile){
+				@media (any-hover: hover) {
+					transition: $transition ease opacity 0s;
+					&:hover {
+						.menu__sublist {
+							opacity: 1;
+							visibility: visible;
+							pointer-events: all;
+						}
+	
+						.menu__arrow {
+							transform: rotate(-90deg);
+						}
 					}
 				}
 			}
