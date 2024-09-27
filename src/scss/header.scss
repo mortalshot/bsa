@@ -828,9 +828,9 @@
 				@media (max-width: $mobile) {
 					position: absolute;
 					left: 0;
+					right: 0;
 					top: toRem(7);
 					height: toRem(58);
-					width: 100%;
 					display: flex;
 					align-items: center;
 					justify-content: flex-end;
