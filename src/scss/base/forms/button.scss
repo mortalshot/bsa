@@ -58,6 +58,19 @@
 		}
 	}
 
+	// .btn_bg-blue3
+	&_bg-blue3 {
+		background-color: $Blue3;
+		color: $White;
+
+		@media (any-hover: hover) {
+			transition: $transition ease background-color 0s;
+			&:hover {
+				background-color: #4a78a3;
+			}
+		}
+	}
+
 	// .btn_border-white
 	&_border-white {
 		border: toRem(1) solid $White;

@@ -199,7 +199,9 @@
 	transition: $transition ease box-shadow 0s;
 
 	&.header_sticky {
-		box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+		@media (min-width: $mobile) {
+			box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+		}
 	}
 
 	// .header-bottom__container

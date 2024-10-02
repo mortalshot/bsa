@@ -52,14 +52,14 @@ flsFunctions.spollers();
 Документация: https://start-template.ru/modul-taby-chertogi-frilansera-v3-0-0/
 Сниппет (HTML): tabs
 */
-//flsFunctions.tabs();
+flsFunctions.tabs();
 
 /*
 Модуль "Показать еще"
 Документация: https://start-template.ru/modul-pokazat-eshhe-chertogi-frilansera-v3-0-0/
 Сниппет (HTML): showmore
 */
-// flsFunctions.showMore();
+flsFunctions.showMore();
 
 /*
 Модуль "До/После"
@@ -127,7 +127,7 @@ flsForms.formSubmit();
 // flsForms.formRating();
 
 /* Модуль работы с select. */
-// import './libs/select.js'
+import './libs/select.js'
 
 /* Модуль работы с календарем */
 // import './files/forms/datepicker.js'

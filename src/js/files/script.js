@@ -211,6 +211,21 @@ function distanceContentButton(button) {
   document.body.style.setProperty('--distance-content-button', distanceContentButton + 'px');
 }
 
+// раскрывающийся список в сайдбаре на контентных страницах
+const hasChildren = document.querySelectorAll('.has-children');
+if (hasChildren.length > 0) {
+  hasChildren.forEach(element => {
+    const elementLink = element.querySelector('a');
+    const elementList = element.querySelector('ul');
+
+    elementLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      element.classList.toggle('_active');
+      _slideToggle(elementList);
+    })
+  });
+}
+
 
 window.addEventListener('DOMContentLoaded', function () {
   setTimeout(() => {

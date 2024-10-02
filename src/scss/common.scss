@@ -22,6 +22,10 @@ h,
     font-weight: 700;
     @include adaptiveValue("font-size", 24, 18, 0, 1440, 768);
   }
+  &4 {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 20, 18, 0, 1440, 768);
+  }
 }
 
 img,
@@ -52,13 +56,15 @@ video {
   }
 
   a {
-    text-decoration: underline from-font;
-    text-underline-offset: 3px;
-    transition: $transition ease text-decoration 0s;
+    &:not(.btn) {
+      text-decoration: underline from-font;
+      text-underline-offset: 3px;
+      transition: $transition ease text-decoration 0s;
 
-    @media (any-hover: hover) {
-      &:hover {
-        text-decoration: underline transparent from-font;
+      @media (any-hover: hover) {
+        &:hover {
+          text-decoration: underline transparent from-font;
+        }
       }
     }
   }

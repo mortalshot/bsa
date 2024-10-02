@@ -449,6 +449,82 @@ function initSliders() {
 			}
 		});
 	}
+
+	if (document.querySelector('.direction__slider')) {
+		new Swiper(".direction__slider", {
+			modules: [Pagination, Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1.3,
+			spaceBetween: 16,
+			autoHeight: false,
+			speed: 800,
+			loop: true,
+			centeredSlides: true,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Кнопки "влево/вправо"
+			navigation: {
+				prevEl: '.direction__slider .swiper__arrow_prev',
+				nextEl: '.direction__slider .swiper__arrow_next',
+			},
+
+			// Пагинация
+			pagination: {
+				el: '.direction__slider .swiper-pagination',
+				clickable: true,
+			},
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Брейкпоинты
+			breakpoints: {
+				480: {
+					slidesPerView: 1.6,
+					spaceBetween: 16,
+				},
+				575: {
+					slidesPerView: 2,
+					spaceBetween: 16,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 16,
+				},
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+				1280: {
+					slidesPerView: 5,
+					spaceBetween: 24,
+				},
+			},
+
+			on: {
+			}
+		});
+	}
 }
 //Скролл на базе слайдера (по классу swiper scroll для оболочки слайдера)
 function initSlidersScroll() {

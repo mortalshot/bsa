@@ -4,6 +4,20 @@
 }
 [data-showmore-button] {
 	span {
+		font-weight: 600;
+		font-size: toRem(16);
+		line-height: math.div(28 , 16);
+		color: #223A71;
+		text-decoration: underline  from-font;
+		text-underline-offset: 3px;
+		transition: $transition ease text-decoration 0s;
+		
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline transparent from-font;
+			}
+		}
+
 		&:last-child {
 			display: none;
 		}

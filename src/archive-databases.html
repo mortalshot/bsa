@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Library"
+})
+
+<body style="--page-bg-color: #1265B5;">
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="inner">
+        <div class="inner__bg">
+          <picture>
+            <source srcset="@img/inner1-bg-big.svg" media="(min-width: 1639.98px)">
+            <img src="@img/inner1-bg.svg" alt="" loading="lazy">
+          </picture>
+        </div>
+
+        <div class="inner__container">
+          <div class="inner__breadcrumbs breadcrumbs">
+            <div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+              <span class="site-breadcrumbs__link shake-animation" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a href="home.html" itemprop="item">
+                  <span itemprop="name">
+                    <svg class="icon">
+                      <use xlink:href="@img/icons/icons.svg#home"></use>
+                    </svg>
+                  </span>
+                </a>
+              </span>
+              <span class="site-breadcrumbs__separator">/</span>
+              <span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a href="" itemprop="item">
+                  <span itemprop="name">Studies</span>
+                </a>
+              </span>
+              <span class="site-breadcrumbs__separator">/</span>
+              <span class="site-breadcrumbs__title">Library</span>
+            </div>
+          </div>
+
+          <div class="inner__heading _content">
+            <h1>Subscribed databases</h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-content">
+        <div data-spollers="574.98, max" class="spollers">
+          <details class="spollers__item">
+            <summary class="spollers__title">
+              <div class="section-content__button content-button">
+                <div class="content-button__left">
+                  <div class="content-button__points">
+                    <img src="@img/icons/points.svg" alt="" loading="lazy">
+                  </div>
+                </div>
+
+                <div class="content-button__center">
+                  <div class="content-button__text">
+                    <span>For students</span>
+                    <span hidden>Close</span>
+                  </div>
+                </div>
+
+                <div class="content-button__right">
+                  <svg class="icon icon_chevron">
+                    <use xlink:href="@img/icons/icons.svg#chevron-link"></use>
+                  </svg>
+                </div>
+              </div>
+            </summary>
+            <div class="spollers__body">
+              <div class="section-content__container section-content__nav-wrapper"></div>
+            </div>
+          </details>
+        </div>
+
+
+        <div class="section-content__main">
+          <div class="section-content__container">
+            <div class="section-content__grid section-content__grid_reverse">
+              <aside class="section-content__sidebar section-sidebar">
+                <div class="section-sidebar__wrapper" data-da=".section-content__nav-wrapper, 574.98, last">
+                  <div class="section-sidebar__block">
+                    <div class="section-sidebar__caption">For students</div>
+
+                    <ul>
+                      <li>
+                        <a href="">Student parlament</a>
+                      </li>
+                      <li>
+                        <a href="">Lecture shedule</a>
+                      </li>
+                      <li>
+                        <a href="">My BIA</a>
+                      </li>
+                      <li class="has-children _active">
+                        <a href="" class="">Tution fee</a>
+
+                        <svg class="icon">
+                          <use xlink:href="img/icons/icons.svg#chevron-link"></use>
+                        </svg>
+
+                        <ul>
+                          <li>
+                            <a href="">Additional fees</a>
+                          </li>
+                          <li>
+                            <a href="">Tution fee discounts</a>
+                          </li>
+                          <li>
+                            <a href="">International and latvian scholarships</a>
+                          </li>
+                          <li>
+                            <a href="">Loans for students</a>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li>
+                        <a href="">Work and Interships</a>
+                      </li>
+
+                      <li>
+                        <a href="">Library</a>
+                      </li>
+                    </ul>
+
+                    <div class="section-sidebar__button">
+                      <button type="button" class="btn btn_bg-green" data-popup="#message">
+                        <span>Apply online</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+
+              <div class="section-content__content">
+                <div class="library">
+                  <div class="library__items">
+                    <div class="library__card">
+                      <div class="library__preview">
+                        <div class="library__image">
+                          <img src="@img/events/events-card1-bg.jpg" alt="" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="library__main">
+                        <div class="library__body">
+                          <div class="library__title">EBSCO</div>
+                          <div class="library__excerpt">The multidisciplinary database of full-text articles and reviews on Humanitarian, Social and Exact Sciences</div>
+                          <div class="library__link">
+                            <a href="">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="library__card">
+                      <div class="library__preview">
+                        <div class="library__image">
+                          <img src="@img/events/events-card2-bg.jpg" alt="" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="library__main">
+                        <div class="library__body">
+                          <div class="library__title">SCOPUS</div>
+                          <div class="library__excerpt">Scopus is the largest abstract and citation database that covers nearly 36,377 titles from about 11,678 publishers, of which 34,346 are peer-reviewed journals in top-level subject fields</div>
+                          <div class="library__link">
+                            <a href="">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="library__card">
+                      <div class="library__preview">
+                        <div class="library__image">
+                          <img src="@img/events/events-card3-bg.jpg" alt="" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="library__main">
+                        <div class="library__body">
+                          <div class="library__title">RUBRICON</div>
+                          <div class="library__excerpt">Web largest reference site, universal reference resources full-text data base, effectively integrating search</div>
+                          <div class="library__link">
+                            <a href="">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="library__card">
+                      <div class="library__preview">
+                        <div class="library__image">
+                          <img src="@img/events/events-card4-bg.jpg" alt="" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="library__main">
+                        <div class="library__body">
+                          <div class="library__title">SCIENCE DIRECT</div>
+                          <div class="library__excerpt">The multidisciplinary database of full-text articles and reviews on Humanitarian, Social and Exact Sciences</div>
+                          <div class="library__link">
+                            <a href="">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="library__card">
+                      <div class="library__preview">
+                        <div class="library__image">
+                          <img src="@img/events/events-card5-bg.jpg" alt="" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="library__main">
+                        <div class="library__body">
+                          <div class="library__title">THE NATIONAL LIBARY OF LATVIA DIGITAL LIBRARY</div>
+                          <div class="library__excerpt">The multidisciplinary database of full-text articles and reviews on Humanitarian, Social and Exact Sciences</div>
+                          <div class="library__link">
+                            <a href="">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="library__card">
+                      <div class="library__preview">
+                        <div class="library__image">
+                          <img src="@img/events/events-card2-bg.jpg" alt="" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="library__main">
+                        <div class="library__body">
+                          <div class="library__title">CIR RUSSIA</div>
+                          <div class="library__excerpt">The multidisciplinary database of full-text articles and reviews on Humanitarian, Social and Exact Sciences</div>
+                          <div class="library__link">
+                            <a href="">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="library__card">
+                      <div class="library__preview">
+                        <div class="library__image">
+                          <img src="@img/events/events-card3-bg.jpg" alt="" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="library__main">
+                        <div class="library__body">
+                          <div class="library__title">CiteSeerX</div>
+                          <div class="library__excerpt">The multidisciplinary database of full-text articles and reviews on Humanitarian, Social and Exact Sciences</div>
+                          <div class="library__link">
+                            <a href="">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="library__card">
+                      <div class="library__preview">
+                        <div class="library__image">
+                          <img src="@img/events/events-card4-bg.jpg" alt="" loading="lazy">
+                        </div>
+                      </div>
+
+                      <div class="library__main">
+                        <div class="library__body">
+                          <div class="library__title">JSTOR</div>
+                          <div class="library__excerpt">The multidisciplinary database of full-text articles and reviews on Humanitarian, Social and Exact Sciences</div>
+                          <div class="library__link">
+                            <a href="">Read more</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      @@include('html/features.htm',{})
+
+      @@include('html/career.htm',{})
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>
