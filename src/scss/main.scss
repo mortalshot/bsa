@@ -3806,7 +3806,7 @@
     }
 
     .swiper__arrow_prev {
-      transform: rotate(-180deg) translateY(50%);
+      transform: rotate(-180deg) translateY(50%) !important;
       @include adaptiveValue("left", 30, 8, 0, 1544, 768);
     }
 

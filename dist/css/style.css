@@ -3563,8 +3563,8 @@ video {
   right: 0
 }
 .direction__slider .swiper__arrow_prev {
-  -webkit-transform: rotate(-180deg) translateY(50%);
-  transform: rotate(-180deg) translateY(50%)
+  -webkit-transform: rotate(-180deg) translateY(50%)!important;
+  transform: rotate(-180deg) translateY(50%)!important
 }
 .direction__slide .program-card {
   border-radius: .5rem;
