@@ -5029,7 +5029,7 @@
             },
             breakpoints: {
                 480: {
-                    slidesPerView: 2,
+                    slidesPerView: 1.5,
                     spaceBetween: 20
                 },
                 575: {
@@ -5066,6 +5066,10 @@
             },
             breakpoints: {
                 480: {
+                    slidesPerView: 1.7,
+                    spaceBetween: 20
+                },
+                575: {
                     slidesPerView: 2,
                     spaceBetween: 20
                 },

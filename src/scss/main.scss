@@ -857,7 +857,7 @@
 .features-item {
   position: relative;
 
-  @media (min-width: $mobileSmall) {
+  @media (min-width: $mobileM) {
     min-height: toRem(242);
 
     &:hover {
@@ -875,11 +875,11 @@
     align-content: flex-start;
     @include adaptiveValue("row-gap", 32, 12, 0, 1440, 768);
 
-    @media (min-width: $mobileSmall) {
+    @media (min-width: $mobileM) {
       padding: toRem(28) toRem(20);
     }
 
-    @media (max-width: $mobileSmall) {
+    @media (max-width: $mobileM) {
       display: flex;
       align-items: center;
     }
@@ -1814,19 +1814,19 @@
 .section-content {
   // .section-content__button
   &__button {
-    @media (min-width: $mobileM) {
+    @media (min-width: $tablet) {
       display: none !important;
     }
   }
 
   // .section-content__nav
   &__nav {
-    @media (min-width: $mobileM) {
+    @media (min-width: $tablet) {
       background-color: $White;
     }
 
     ul {
-      @media (min-width: $mobileM) {
+      @media (min-width: $tablet) {
         display: flex;
         overflow-x: auto;
         scrollbar-width: thin;
@@ -1837,7 +1837,7 @@
           height: 0;
         }
       }
-      @media (max-width: $mobileM) {
+      @media (max-width: $tablet) {
         &:not(:last-child) {
           margin-bottom: toRem(24);
         }
@@ -1868,14 +1868,16 @@
         padding-bottom: toRem(12);
       }
 
-      @media (any-hover: hover) {
-        transition: $transition ease opacity 0s;
-        &:hover {
-          color: $Blue3;
+      @media (min-width: $mobile) {
+        @media (any-hover: hover) {
+          transition: $transition ease opacity 0s;
+          &:hover {
+            color: $Blue3;
 
-          &::after {
-            width: 100%;
-            opacity: 1;
+            &::after {
+              width: 100%;
+              opacity: 1;
+            }
           }
         }
       }
@@ -1898,13 +1900,11 @@
 
   // .section-content__nav-wrapper
   &__nav-wrapper {
-    @media (min-width: $mobileM) and (max-width: $tablet) {
-      padding: 0;
-    }
-
-    @media (max-width: $mobileM) {
+    @media (max-width: $tablet) {
       padding-bottom: toRem(16);
       background-color: $White;
+      position: relative;
+      z-index: 2;
     }
   }
 
@@ -2441,7 +2441,7 @@
     display: grid;
     align-content: flex-start;
 
-    @media (max-width: $mobileM) {
+    @media (max-width: $tablet) {
       padding-top: toRem(16);
     }
   }
@@ -2455,7 +2455,7 @@
       margin-bottom: toRem(28);
     }
 
-    @media (max-width: $mobileM) {
+    @media (max-width: $tablet) {
       padding-bottom: toRem(20);
 
       &:not(:last-child) {
@@ -2590,12 +2590,12 @@
     &:not(:last-child) {
       margin-bottom: toRem(40);
 
-      @media (max-width: $mobileM) {
+      @media (max-width: $tablet) {
         margin-bottom: toRem(28);
       }
     }
 
-    @media (max-width: $mobileM) {
+    @media (max-width: $tablet) {
       .documents__link {
         padding: 0;
       }
@@ -2610,6 +2610,23 @@
 
     .request__title {
       font-size: toRem(18);
+      display: flex;
+      align-items: center;
+      gap: toRem(16);
+
+      @media (min-width: $tablet) {
+        align-items: flex-start;
+      }
+    }
+
+    .request__icon {
+      flex: 0 0 toRem(28);
+      max-width: toRem(28);
+      position: relative;
+
+      @media (min-width: $tablet) {
+        top: toRem(4);
+      }
     }
 
     .request__subtitle {
@@ -3154,7 +3171,7 @@
 .news-item {
   display: grid;
   position: relative;
-  @include adaptiveValue("column-gap", 24, 16, 0, 768, 575);
+  transition: 0.5s ease box-shadow 0s;
 
   @media (min-width: $mobileM) {
     grid-template-columns: percent(377, 834) 1fr;
@@ -3166,6 +3183,8 @@
 
   @media (any-hover: hover) {
     &:hover {
+      box-shadow: 0 toRem(4) toRem(20) 0 rgba(0, 0, 0, 0.1);
+
       img {
         transform: scale(1.05);
       }
@@ -3191,17 +3210,17 @@
     @include adaptiveValue("padding-right", 36, 18);
 
     @media (min-width: $mobileSmall) {
-      border-radius: 0 toRem(40);
+      border-radius: 0 0 0 toRem(40);
     }
     @media (max-width: $mobileM) {
       aspect-ratio: 320/227;
     }
 
     img {
-      @media (min-width: $mobileSmall) {
+      @media (min-width: $mobileM) {
         left: toRem(8);
         width: calc(100% - toRem(16));
-        border-radius: 0 toRem(40);
+        border-radius: 0 0 0 toRem(40);
         overflow: hidden;
         transition: 1s ease transform 0s;
       }
@@ -3224,7 +3243,8 @@
     padding: toRem(20);
 
     @media (min-width: $mobileSmall) {
-      background-color: #f6f9fc;
+      background-color: $White;
+      border-radius: 0 toRem(40) 0 0;
     }
   }
 
@@ -3471,6 +3491,13 @@
       background: url(../img/bg-block/bg-block1-bg2.svg) no-repeat center/contain;
       top: percent(-114, 458);
       right: 0;
+    }
+    @media (min-width: toEm(1639.98)) {
+      flex: 0 0 toRem(546);
+      width: toRem(546);
+      height: toRem(473);
+      background: url(../img/bg-block/bg-block1-bg2-big.svg) no-repeat center/contain;
+      @include adaptiveValue("right", 700, -100, 0, 3200, 1920);
     }
   }
 
@@ -3895,6 +3922,10 @@
         }
       }
     }
+
+    &._spoller-active {
+      border-left: toRem(1) dashed #a8cbed;
+    }
   }
 
   // .programs-price__name
@@ -4068,14 +4099,19 @@
 
   // .library__card
   &__card {
+    border-radius: 0 toRem(40) 0 0;
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
-    @media (any-hover: hover) {
-      &:hover {
-        .library__preview,
-        .library__main {
+    @media (min-width: $mobile) {
+      border-radius: 0 toRem(40) 0 toRem(40);
+
+      @media (any-hover: hover) {
+        transition: 0.5s ease box-shadow 0s;
+
+        &:hover {
           box-shadow: 0 4px 24px 0 rgba(61, 73, 131, 0.15);
         }
       }
@@ -4085,20 +4121,17 @@
   // .library__preview
   &__preview {
     background-color: $White;
-    border-radius: 0 toRem(40) 0 toRem(40);
     overflow: hidden;
-    transition: 0.5s ease box-shadow 0s;
-    @include adaptiveValue("padding-left", 8, 6);
-    @include adaptiveValue("padding-right", 8, 6);
 
-    @media (min-width: $mobile) {
-      margin-right: toRem(8);
+    @media (min-width: $mobileM) {
+      @include adaptiveValue("padding-left", 8, 6);
+      @include adaptiveValue("padding-right", 8, 6);
     }
   }
 
   // .library__image
   &__image {
-    border-radius: 0 toRem(40) 0 toRem(40);
+    border-radius: 0 toRem(40) 0 0;
     overflow: hidden;
 
     img {
@@ -4116,16 +4149,17 @@
   // .library__main
   &__main {
     flex: 1;
-    margin-top: toRem(24);
     transition: 0.5s ease box-shadow 0s;
     display: flex;
     flex-direction: column;
+    @include adaptiveValue("padding-left", 24, 16);
+    @include adaptiveValue("padding-right", 24, 16);
 
     @media (min-width: $mobile) {
-      margin-top: toRem(14);
-      padding: 0 toRem(24);
       background-color: #f6f9fc;
-      border-radius: 0 toRem(40) 0 0;
+    }
+    @media (max-width: $mobile) {
+      background-color: $White;
     }
   }
 
@@ -4135,9 +4169,9 @@
     display: grid;
     align-content: flex-start;
     row-gap: toRem(8);
-    padding-top: toRem(10);
-    padding-bottom: toRem(10);
     border-bottom: toRem(1) solid #d9e4ef;
+    @include adaptiveValue("padding-top", 24, 14);
+    @include adaptiveValue("padding-bottom", 24, 14);
   }
 
   // .library__title
