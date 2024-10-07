@@ -3175,7 +3175,11 @@
   position: relative;
   transition: 0.5s ease box-shadow 0s;
 
+  @media (min-width: $mobileSmall) {
+    overflow: hidden;
+  }
   @media (min-width: $mobileM) {
+    border-radius: 0 toRem(40);
     grid-template-columns: percent(377, 834) 1fr;
   }
   @media (max-width: $mobileSmall) {
@@ -3203,16 +3207,17 @@
   &__preview {
     position: relative;
     background-color: $White;
-    border-radius: 0 0 0 toRem(25);
     overflow: hidden;
-    aspect-ratio: 360 / 312;
     @include adaptiveValue("padding-top", 36, 24);
     @include adaptiveValue("padding-bottom", 36, 24);
     @include adaptiveValue("padding-left", 36, 18);
     @include adaptiveValue("padding-right", 36, 18);
 
-    @media (min-width: $mobileSmall) {
+    @media (min-width: $mobileM) {
       border-radius: 0 0 0 toRem(40);
+    }
+    @media (min-width: $mobile) {
+      aspect-ratio: 360 / 312;
     }
     @media (max-width: $mobileM) {
       aspect-ratio: 320/227;
@@ -3243,9 +3248,9 @@
     display: grid;
     align-content: center;
     padding: toRem(20);
+    background-color: $White;
 
-    @media (min-width: $mobileSmall) {
-      background-color: $White;
+    @media (min-width: $mobileM) {
       border-radius: 0 toRem(40) 0 0;
     }
   }
@@ -4171,7 +4176,6 @@
     display: grid;
     align-content: flex-start;
     row-gap: toRem(8);
-    border-bottom: toRem(1) solid #d9e4ef;
     @include adaptiveValue("padding-top", 24, 14);
     @include adaptiveValue("padding-bottom", 24, 14);
   }

@@ -3244,9 +3244,7 @@ video {
 .news-item__preview {
   position: relative;
   background-color: #fff;
-  border-radius: 0 0 0 1.5625rem;
-  overflow: hidden;
-  aspect-ratio: 360/312
+  overflow: hidden
 }
 .news-item__preview .events-card__tags {
   position: relative;
@@ -3255,7 +3253,8 @@ video {
 .news-item__main {
   display: grid;
   align-content: center;
-  padding: 1.25rem
+  padding: 1.25rem;
+  background-color: #fff
 }
 .news-item__body {
   display: grid;
@@ -3704,8 +3703,7 @@ video {
   flex: 1;
   display: grid;
   align-content: flex-start;
-  row-gap: .5rem;
-  border-bottom: .0625rem solid #d9e4ef
+  row-gap: .5rem
 }
 .library__title {
   font-weight: 700;
@@ -4020,12 +4018,8 @@ button.swiper-pagination-bullet {
   .news__items {
     row-gap: 1.5rem
   }
-  .news-item__preview {
-    border-radius: 0 0 0 2.5rem
-  }
-  .news-item__main {
-    background-color: #fff;
-    border-radius: 0 2.5rem 0 0
+  .news-item {
+    overflow: hidden
   }
   .news-card {
     border-radius: 0 2.5rem;
@@ -4147,7 +4141,11 @@ button.swiper-pagination-bullet {
     text-align: center
   }
   .news-item {
+    border-radius: 0 2.5rem;
     grid-template-columns: 45.2038369305% 1fr
+  }
+  .news-item__preview {
+    border-radius: 0 0 0 2.5rem
   }
   .news-item__preview img {
     left: .5rem;
@@ -4155,6 +4153,9 @@ button.swiper-pagination-bullet {
     border-radius: 0 0 0 2.5rem;
     overflow: hidden;
     transition: 1s ease transform 0s
+  }
+  .news-item__main {
+    border-radius: 0 2.5rem 0 0
   }
   .bia-sign__row {
     display: flex;
@@ -4628,6 +4629,9 @@ button.swiper-pagination-bullet {
   }
   .section-contacts__persons {
     grid-template-columns: repeat(2,1fr)
+  }
+  .news-item__preview {
+    aspect-ratio: 360/312
   }
   .bg-block::before {
     flex: 0 0 7rem;
