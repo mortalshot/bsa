@@ -4230,6 +4230,12 @@ button.swiper-pagination-bullet {
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg)
   }
+  .events-card {
+    transition: .8s ease all 0s
+  }
+  .events-card:hover {
+    flex: 0 0 59.5723014257%
+  }
   .section-content__nav a {
     transition: .3s ease opacity 0s
   }
@@ -8443,12 +8449,6 @@ button.swiper-pagination-bullet {
   .footer-bottom__dev:hover span {
     -webkit-text-decoration: underline from-font;
     text-decoration: underline from-font
-  }
-  .events-card {
-    transition: .8s ease all 0s
-  }
-  .events-card:hover {
-    flex: 0 0 59.5723014257%
   }
   .events-item:hover .events-item__title {
     font-size: 1.0625rem

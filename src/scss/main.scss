@@ -381,10 +381,12 @@
 .events-card {
   position: relative;
 
-  @media (any-hover: hover) {
-    transition: 0.8s ease all 0s;
-    &:hover {
-      flex: 0 0 percent(585, 982);
+  @media (min-width: $mobile) {
+    @media (any-hover: hover) {
+      transition: 0.8s ease all 0s;
+      &:hover {
+        flex: 0 0 percent(585, 982);
+      }
     }
   }
 
