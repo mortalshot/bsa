@@ -11,6 +11,10 @@ document.addEventListener('click', function (e) {
     targetElement.closest('.menu__item').classList.toggle('_active');
   }
 
+  if (targetElement.closest('.menu__icon')) {
+    removeClasses(document.querySelectorAll('.menu__item._active'), "_active");
+  }
+
   if (targetElement.closest('.search__btn')) {
     e.preventDefault();
     targetElement.closest('.header__search').classList.toggle('_active');
